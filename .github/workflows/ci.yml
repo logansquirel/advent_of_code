@@ -1,0 +1,92 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  markdown:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout repository
+      uses: actions/checkout@v2
+    - name: install markdownlint-cli
+      run: npm install markdownlint-cli
+    - name: check markdown file(s)
+      run: npx markdownlint '**/*.md' --ignore node_modules
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout repository
+      uses: actions/checkout@v2
+    - name: setup Rust toolchain
+      uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        default: true
+        override: true
+        toolchain: stable
+    - name: cargo build
+      uses: actions-rs/cargo@v1
+      with:
+        command: build
+        args: --release --workspace --all-targets --all-features
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout repository
+      uses: actions/checkout@v2
+    - name: setup Rust toolchain
+      uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        default: true
+        override: true
+        toolchain: stable
+    - name: cargo test
+      uses: actions-rs/cargo@v1
+      with:
+        command: test
+        args: --workspace --all-targets --all-features
+
+  fmt:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout repository
+      uses: actions/checkout@v2
+    - name: setup Rust toolchain
+      uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        default: true
+        override: true
+        toolchain: stable
+        components: rustfmt
+    - name: cargo fmt
+      uses: actions-rs/cargo@v1
+      with:
+        command: fmt
+        args: --all -- --check
+
+  clippy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout repository
+      uses: actions/checkout@v2
+    - name: setup Rust toolchain
+      uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        default: true
+        override: true
+        toolchain: stable
+        components: clippy
+    - name: cargo clippy
+      uses: actions-rs/cargo@v1
+      with:
+        command: clippy
+        args: --workspace --all-targets --all-features -- -D warnings

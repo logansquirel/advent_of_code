@@ -1,6 +1,6 @@
-use aoc_yyyy_day_dd::Result;
 use aoc_yyyy_day_dd::puzzle_one;
 use aoc_yyyy_day_dd::puzzle_two;
+use aoc_yyyy_day_dd::Result;
 
 #[test]
 fn solution_puzzle_one() -> Result<()> {

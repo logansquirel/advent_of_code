@@ -63,4 +63,14 @@ mod tests {
         assert_eq!(-3, puzzle_one(")))"));
         assert_eq!(-3, puzzle_one(")())())"));
     }
+
+    #[test]
+    fn puzzle_two_example_one() {
+        assert_eq!(1, puzzle_two(")"));
+    }
+
+    #[test]
+    fn puzzle_two_example_two() {
+        assert_eq!(5, puzzle_two("()())"));
+    }
 }

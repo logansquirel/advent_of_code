@@ -1,5 +1,7 @@
-# Advent of Code yyyy-dd
+# Advent of Code -- Year yyyy - Day dd
 
-## Puzzle 1
+## [Title](https://adventofcode.com/yyyy/day/dd)
 
-## Puzzle 2
+### [Puzzle 1](https://adventofcode.com/yyyy/day/dd#part1)
+
+### [Puzzle 2](https://adventofcode.com/yyyy/day/dd#part2)

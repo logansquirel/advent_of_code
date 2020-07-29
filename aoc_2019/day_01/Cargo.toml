@@ -1,0 +1,7 @@
+[package]
+name = "aoc_2019_day_01"
+version = "0.1.0"
+authors = ["Logan SQUIREL <logan.squirel@protonmail.com>"]
+edition = "2018"
+
+[dependencies]

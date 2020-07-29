@@ -1,8 +1,8 @@
-# Advent of Code 2016-01
+# Advent of Code -- Year 2016 - Day 01
 
-## --- Day 1: No Time for a Taxicab ---
+## [No Time for a Taxicab](https://adventofcode.com/2016/day/1)
 
-### Puzzle 1
+### [Puzzle 1](https://adventofcode.com/2016/day/1#part1)
 
 Santa's sleigh uses a very high-precision clock to guide its movements, and the
 clock's oscillator is regulated by stars. Unfortunately, the stars have been
@@ -37,7 +37,7 @@ For example:
 
 **How many blocks away is Easter Bunny HQ?**
 
-### Puzzle 2
+### [Puzzle 2](https://adventofcode.com/2016/day/1#part2)
 
 Then, you notice the instructions continue on the back of the Recruiting
 Document. Easter Bunny HQ is actually at the first location you visit twice.

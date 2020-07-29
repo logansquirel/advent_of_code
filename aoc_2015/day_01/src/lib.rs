@@ -5,7 +5,7 @@ pub fn puzzle_one(input: &str) -> i32 {
             ')' => floor -= 1,
             '(' => floor += 1,
             x => panic!(
-                "invalid instruction :'{}'",
+                "invalid instruction: '{}'",
                 x.escape_default().collect::<String>()
             ),
         }
@@ -20,7 +20,7 @@ pub fn puzzle_two(input: &str) -> usize {
             ')' => floor -= 1,
             '(' => floor += 1,
             x => panic!(
-                "invalid instruction :'{}'",
+                "invalid instruction: '{}'",
                 x.escape_default().collect::<String>()
             ),
         }

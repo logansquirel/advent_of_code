@@ -2,7 +2,7 @@
 
 ## [Not Quite Lisp](https://adventofcode.com/2015/day/1)
 
-### [Puzzle 1](https://adventofcode.com/yyyy/day/dd#part1)
+### [Puzzle 1](https://adventofcode.com/2015/day/1#part1)
 
 Santa was hoping for a white Christmas, but his weather machine's "snow"
 function is powered by stars, and he's fresh out! To save Christmas, he needs

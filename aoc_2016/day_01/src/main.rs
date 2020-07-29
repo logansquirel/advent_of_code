@@ -2,11 +2,12 @@ use std::io::Read;
 
 use aoc_2016_day_01::puzzle_one;
 use aoc_2016_day_01::puzzle_two;
-use aoc_2016_day_01::Result;
 
-fn main() -> Result<()> {
+fn main() {
     let mut input = String::new();
-    std::io::stdin().read_to_string(&mut input)?;
+    std::io::stdin()
+        .read_to_string(&mut input)
+        .expect("failed to read input");
     println!("Advent of Code 2016-01");
     println!("------ Puzzle 1 ------");
     println!("{}", puzzle_one(&input));
@@ -14,5 +15,4 @@ fn main() -> Result<()> {
     println!("------ Puzzle 2 ------");
     println!("{}", puzzle_two(&input));
     println!();
-    Ok(())
 }

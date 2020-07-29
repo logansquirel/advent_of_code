@@ -1,7 +1,5 @@
 use std::collections::HashSet;
 
-pub type Result<T> = std::result::Result<T, Box<dyn std::error::Error>>;
-
 pub fn puzzle_one(input: &str) -> u32 {
     let mut pos = Position {
         coordinates: Coordinates { x: 0, y: 0 },
@@ -25,7 +23,7 @@ pub fn puzzle_two(input: &str) -> u32 {
         dir: Direction::North,
     };
     let mut seen = HashSet::new();
-    'mark: for instruction in input.trim().split(", ") {
+    for instruction in input.trim().split(", ") {
         match instruction.chars().next() {
             Some('L') => pos.left(),
             Some('R') => pos.right(),
@@ -35,13 +33,13 @@ pub fn puzzle_two(input: &str) -> u32 {
         for _ in 0..count {
             pos.step();
             if seen.contains(&pos.coordinates) {
-                break 'mark;
+                return pos.coordinates.distance();
             } else {
                 seen.insert(pos.coordinates);
             }
         }
     }
-    pos.coordinates.distance()
+    panic!("Easter Bunny HQ not found")
 }
 
 #[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd)]

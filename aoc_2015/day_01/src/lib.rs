@@ -4,10 +4,7 @@ pub fn puzzle_one(input: &str) -> i32 {
         match char {
             ')' => floor -= 1,
             '(' => floor += 1,
-            x => panic!(
-                "invalid instruction :'{}'",
-                x.escape_default().collect::<String>()
-            ),
+            _ => continue,
         }
     }
     floor
@@ -19,10 +16,7 @@ pub fn puzzle_two(input: &str) -> usize {
         match char {
             ')' => floor -= 1,
             '(' => floor += 1,
-            x => panic!(
-                "invalid instruction :'{}'",
-                x.escape_default().collect::<String>()
-            ),
+            _ => continue,
         }
         if floor == -1 {
             return pos + 1;

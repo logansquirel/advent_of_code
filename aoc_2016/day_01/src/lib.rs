@@ -1,7 +1,5 @@
 use std::collections::HashSet;
 
-pub type Result<T> = std::result::Result<T, Box<dyn std::error::Error>>;
-
 pub fn puzzle_one(input: &str) -> u32 {
     let mut pos = Position {
         coordinates: Coordinates { x: 0, y: 0 },

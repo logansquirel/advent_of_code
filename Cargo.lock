@@ -13,6 +13,10 @@ name = "aoc_2016_day_01"
 version = "0.1.0"
 
 [[package]]
+name = "aoc_2016_day_02"
+version = "0.1.0"
+
+[[package]]
 name = "aoc_2017_day_01"
 version = "0.1.0"
 

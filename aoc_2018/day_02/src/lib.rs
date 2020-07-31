@@ -8,10 +8,10 @@ pub fn puzzle_one(input: &str) -> u32 {
         for char in line.trim().chars() {
             seen.entry(char).and_modify(|v| *v += 1).or_insert(1);
         }
-        if let Some(_) = seen.values().find(|&&v| v == 2) {
+        if seen.values().any(|&v| v == 2) {
             twice += 1;
         }
-        if let Some(_) = seen.values().find(|&&v| v == 3) {
+        if seen.values().any(|&v| v == 3) {
             three += 1;
         }
     }
@@ -20,9 +20,7 @@ pub fn puzzle_one(input: &str) -> u32 {
 
 pub fn puzzle_two(input: &str) -> String {
     let mut common = String::new();
-    let mut line = 0;
-    for id1 in input.trim().lines() {
-        line += 1;
+    for (line, id1) in input.trim().lines().enumerate() {
         for id2 in input.trim().lines().skip(line) {
             match compare_box_ids(id1, id2) {
                 Some(idx) => common = format!("{}{}", &id1[..idx], &id1[(idx + 1)..]),

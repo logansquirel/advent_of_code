@@ -6,10 +6,10 @@ cargo check --quiet --workspace --all-targets --all-features
 echo "OK"
 echo "check format..."
 cargo fmt --all -- --check
-echo "OK" 
+echo "OK"
 cargo clean
 echo "check lints..."
-cargo clippy --quiet --workspace --all-targets --all-features
+cargo clippy --quiet --workspace --all-targets --all-features -- -D warnings
 echo "OK"
 cargo clean
 echo "building..."

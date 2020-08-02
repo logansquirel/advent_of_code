@@ -14,6 +14,8 @@ language you like.
 
 ## Solutions
 
+![CI](https://github.com/logansquirel/Advent_of_Code/workflows/CI/badge.svg)
+
 This repository is a collection of possible solution to each puzzle using the
 [Rust](https://www.rust-lang.org/) programming language.
 

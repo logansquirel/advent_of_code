@@ -28,11 +28,8 @@ This repository is a collection of possible solution to each puzzle using the
 ## Usage
 
 ```shell-session
-# clone repository
 $ git clone https://github.com/logansquirel/Advent_of_Code.git
-# select year and day
 $ cd aoc_yyyy/day_dd
-# run puzzle
 $ cargo run --quiet --release < input/input.dat
 Advent of Code yyyy-dd
 ------ Puzzle 1 ------

@@ -1,5 +1,6 @@
 name: CI
 
+# checks on push and pull request (master branch)
 on:
   push:
     branches: [ master ]
@@ -7,6 +8,13 @@ on:
     branches: [ master ]
 
 jobs:
+  # check mardown format:
+  # sources:
+  #   - https://github.com/markdownlint/markdownlint (markdownlint ruby)
+  #   - https://github.com/DavidAnson/markdownlint (markdownlint Node.js)
+  #   - https://github.com/igorshubovych/markdownlint-cli (markdownlint CLI)
+  # npm used for installation
+  # npx used for running
   markdown:
     runs-on: ubuntu-latest
     steps:
@@ -17,6 +25,7 @@ jobs:
     - name: check markdown file(s)
       run: npx markdownlint '**/*.md' --ignore node_modules
 
+  # build in release mode
   build:
     runs-on: ubuntu-latest
     steps:
@@ -35,6 +44,7 @@ jobs:
         command: build
         args: --release --workspace --all-targets --all-features
 
+  # test in debug mode
   test:
     runs-on: ubuntu-latest
     steps:
@@ -53,6 +63,7 @@ jobs:
         command: test
         args: --workspace --all-targets --all-features
 
+  # Rust code format checks
   fmt:
     runs-on: ubuntu-latest
     steps:
@@ -72,6 +83,8 @@ jobs:
         command: fmt
         args: --all -- --check
 
+  # Rust lint checks
+  # All lints are denied for fast errors
   clippy:
     runs-on: ubuntu-latest
     steps:

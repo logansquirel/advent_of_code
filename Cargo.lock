@@ -2,45 +2,45 @@
 # It is not intended for manual editing.
 [[package]]
 name = "aoc_2015_day_01"
-version = "0.1.0"
+version = "1.0.0"
 
 [[package]]
 name = "aoc_2015_day_02"
-version = "0.1.0"
+version = "1.0.0"
 
 [[package]]
 name = "aoc_2016_day_01"
-version = "0.1.0"
+version = "1.0.0"
 
 [[package]]
 name = "aoc_2016_day_02"
-version = "0.1.0"
+version = "1.0.0"
 
 [[package]]
 name = "aoc_2017_day_01"
-version = "0.1.0"
+version = "1.0.0"
 
 [[package]]
 name = "aoc_2017_day_02"
-version = "0.1.0"
+version = "1.0.0"
 
 [[package]]
 name = "aoc_2018_day_01"
-version = "0.1.0"
+version = "1.0.0"
 
 [[package]]
 name = "aoc_2018_day_02"
-version = "0.1.0"
+version = "1.0.0"
 
 [[package]]
 name = "aoc_2019_day_01"
-version = "0.1.0"
+version = "1.0.0"
 
 [[package]]
 name = "aoc_2019_day_02"
-version = "0.1.0"
+version = "1.0.0"
 
 [[package]]
 name = "aoc_yyyy_day_dd"
-version = "0.1.0"
+version = "1.0.0"
 

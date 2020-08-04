@@ -1,6 +1,6 @@
 [package]
 name = "aoc_yyyy_day_dd"
-version = "0.1.0"
+version = "1.0.0"
 authors = ["Logan SQUIREL <logan.squirel@protonmail.com>"]
 edition = "2018"
 

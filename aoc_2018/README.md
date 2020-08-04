@@ -4,9 +4,14 @@ Event available at: <https://adventofcode.com/2018>
 
 ## Days
 
-![Uncompleted](https://img.shields.io/badge/AoC--yyyy%2FDay--dd-%E2%98%86%E2%98%86-blue) -- Puzzle 1 and 2 not completed
-![Partial](https://img.shields.io/badge/AoC--yyyy%2FDay--dd-%E2%98%85%E2%98%86-blue) -- Puzzle 1 completed, Puzzle 2 not completed
-![Completed](https://img.shields.io/badge/AoC--yyyy%2FDay--dd-%E2%98%85%E2%98%85-blue) -- Puzzle 1 and 2 completed
+![Uncompleted](https://img.shields.io/badge/AoC--yyyy%2FDay--dd-%E2%98%86%E2%98%86-blue)
+-- Puzzle 1 and 2 not completed
+
+![Partial](https://img.shields.io/badge/AoC--yyyy%2FDay--dd-%E2%98%85%E2%98%86-blue)
+-- Puzzle 1 completed, Puzzle 2 not completed
+
+![Completed](https://img.shields.io/badge/AoC--yyyy%2FDay--dd-%E2%98%85%E2%98%85-blue)
+-- Puzzle 1 and 2 completed
 
 |Day| Completion
 |---|-----------|

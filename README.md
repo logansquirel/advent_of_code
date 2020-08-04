@@ -14,23 +14,22 @@ language you like.
 
 ## Solutions
 
+![CI](https://github.com/logansquirel/Advent_of_Code/workflows/CI/badge.svg)
+
 This repository is a collection of possible solution to each puzzle using the
 [Rust](https://www.rust-lang.org/) programming language.
 
-- [Event 2015](aoc_2015/README.md)
-- [Event 2016](aoc_2016/README.md)
-- [Event 2017](aoc_2017/README.md)
-- [Event 2018](aoc_2018/README.md)
-- [Event 2019](aoc_2019/README.md)
+- [![AoC-2015](https://img.shields.io/badge/AoC--2015-%204%20%E2%98%85%20-blue)](aoc_2015/README.md)
+- [![AoC-2016](https://img.shields.io/badge/AoC--2016-%204%20%E2%98%85%20-blue)](aoc_2016/README.md)
+- [![AoC-2017](https://img.shields.io/badge/AoC--2017-%204%20%E2%98%85%20-blue)](aoc_2017/README.md)
+- [![AoC-2018](https://img.shields.io/badge/AoC--2018-%204%20%E2%98%85%20-blue)](aoc_2018/README.md)
+- [![AoC-2019](https://img.shields.io/badge/AoC--2019-%204%20%E2%98%85%20-blue)](aoc_2019/README.md)
 
 ## Usage
 
 ```shell-session
-# clone repository
 $ git clone https://github.com/logansquirel/Advent_of_Code.git
-# select year and day
 $ cd aoc_yyyy/day_dd
-# run puzzle
 $ cargo run --quiet --release < input/input.dat
 Advent of Code yyyy-dd
 ------ Puzzle 1 ------

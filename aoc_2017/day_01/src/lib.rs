@@ -1,29 +1,18 @@
 pub fn puzzle_one(input: &str) -> u32 {
-    let first = input
-        .trim()
-        .chars()
-        .next()
-        .expect("empty input")
-        .to_digit(10)
-        .expect("illegal digit");
-    let mut iter = input
+    let vec: Vec<u32> = input
         .trim()
         .chars()
         .filter_map(|c| c.to_digit(10))
-        .peekable();
+        .collect();
     let mut sum = 0;
-    loop {
-        let digit = iter.next().unwrap();
-        match iter.peek() {
-            Some(&d) if d == digit => sum += digit,
-            None => {
-                if digit == first {
-                    sum += digit
-                }
-                break;
-            }
-            _ => continue,
+    let len = vec.len();
+    for idx in 0..(len - 1) {
+        if vec[idx] == vec[idx + 1] {
+            sum += vec[idx];
         }
+    }
+    if vec[len - 1] == vec[0] {
+        sum += vec[0];
     }
     sum
 }

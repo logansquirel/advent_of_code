@@ -1,8 +1,8 @@
 # Advent of Code -- Year 2016 - Day 03
 
-## [Squares With Three Sides](https://adventofcode.com/2016/day/03)
+## [Squares With Three Sides](https://adventofcode.com/2016/day/3)
 
-### [Puzzle 1](https://adventofcode.com/2016/day/03#part1)
+### [Puzzle 1](https://adventofcode.com/2016/day/3#part1)
 
 Now that you can think clearly, you move deeper into the labyrinth of hallways
 and office furniture that makes up this part of Easter Bunny HQ. This must be a
@@ -21,7 +21,7 @@ not larger than `25`.
 
 **In your puzzle input, how many of the listed triangles are possible?**
 
-### [Puzzle 2](https://adventofcode.com/2016/day/03#part2)
+### [Puzzle 2](https://adventofcode.com/2016/day/3#part2)
 
 Now that you've helpfully marked up their design documents, it occurs to you
 that triangles are specified in groups of three vertically. Each set of three

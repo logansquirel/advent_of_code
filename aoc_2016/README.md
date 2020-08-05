@@ -17,7 +17,7 @@ Event available at: <https://adventofcode.com/2016>
 |---|-----------|
 |01|[![Day 01](https://img.shields.io/badge/AoC--2016%2FDay--01-%E2%98%85%E2%98%85-blue)](day_01/readme.md)|
 |02|[![Day 02](https://img.shields.io/badge/AoC--2016%2FDay--02-%E2%98%85%E2%98%85-blue)](day_02/readme.md)|
-|03|[![Day 03](https://img.shields.io/badge/AoC--2016%2FDay--03-%E2%98%86%E2%98%86-blue)](day_03/readme.md)|
+|03|[![Day 03](https://img.shields.io/badge/AoC--2016%2FDay--03-%E2%98%85%E2%98%85-blue)](day_03/readme.md)|
 |04|[![Day 04](https://img.shields.io/badge/AoC--2016%2FDay--04-%E2%98%86%E2%98%86-blue)](day_04/readme.md)|
 |05|[![Day 05](https://img.shields.io/badge/AoC--2016%2FDay--05-%E2%98%86%E2%98%86-blue)](day_05/readme.md)|
 |06|[![Day 06](https://img.shields.io/badge/AoC--2016%2FDay--06-%E2%98%86%E2%98%86-blue)](day_06/readme.md)|

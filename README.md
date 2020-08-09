@@ -21,7 +21,7 @@ This repository is a collection of possible solution to each puzzle using the
 
 - [![AoC-2015](https://img.shields.io/badge/AoC--2015-%206%20%E2%98%85%20-blue)](aoc_2015/README.md)
 - [![AoC-2016](https://img.shields.io/badge/AoC--2016-%206%20%E2%98%85%20-blue)](aoc_2016/README.md)
-- [![AoC-2017](https://img.shields.io/badge/AoC--2017-%204%20%E2%98%85%20-blue)](aoc_2017/README.md)
+- [![AoC-2017](https://img.shields.io/badge/AoC--2017-%206%20%E2%98%85%20-blue)](aoc_2017/README.md)
 - [![AoC-2018](https://img.shields.io/badge/AoC--2018-%204%20%E2%98%85%20-blue)](aoc_2018/README.md)
 - [![AoC-2019](https://img.shields.io/badge/AoC--2019-%204%20%E2%98%85%20-blue)](aoc_2019/README.md)
 

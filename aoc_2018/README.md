@@ -4,8 +4,8 @@ Event available at: <https://adventofcode.com/2018>
 
 ## Days
 
-|Day| Completion|
-|---|-----------|
+|Day|Completion|
+|---|----------|
 |01|[★★](day_01/readme.md)|
 |02|[★★](day_02/readme.md)|
 |03|[☆☆](day_03/readme.md)|

@@ -20,11 +20,16 @@ language you like.
 This repository is a collection of possible solution to each puzzle using the
 [Rust](https://www.rust-lang.org/) programming language.
 
-[![AoC-2015](https://img.shields.io/badge/AoC--2015-6%20%E2%98%85-5e81ac?style=for-the-badge)](aoc_2015/README.md)  
-[![AoC-2016](https://img.shields.io/badge/AoC--2016-6%20%E2%98%85-5e81ac?style=for-the-badge)](aoc_2016/README.md)  
-[![AoC-2017](https://img.shields.io/badge/AoC--2017-6%20%E2%98%85-5e81ac?style=for-the-badge)](aoc_2017/README.md)  
-[![AoC-2018](https://img.shields.io/badge/AoC--2018-4%20%E2%98%85-5e81ac?style=for-the-badge)](aoc_2018/README.md)  
-[![AoC-2019](https://img.shields.io/badge/AoC--2019-4%20%E2%98%85-5e81ac?style=for-the-badge)](aoc_2019/README.md)  
+[![AoC-2015](https://img.shields.io/badge/AoC--2015-6%20%E2%98%85-5e81ac?style=for-the-badge)](aoc_2015/README.md)
+
+[![AoC-2016](https://img.shields.io/badge/AoC--2016-6%20%E2%98%85-5e81ac?style=for-the-badge)](aoc_2016/README.md)
+
+[![AoC-2017](https://img.shields.io/badge/AoC--2017-6%20%E2%98%85-5e81ac?style=for-the-badge)](aoc_2017/README.md)
+
+[![AoC-2018](https://img.shields.io/badge/AoC--2018-4%20%E2%98%85-5e81ac?style=for-the-badge)](aoc_2018/README.md)
+
+[![AoC-2019](https://img.shields.io/badge/AoC--2019-4%20%E2%98%85-5e81ac?style=for-the-badge)](aoc_2019/README.md)
+
 [![AoC-2020](https://img.shields.io/badge/AoC--2020-0%20%E2%98%85-5e81ac?style=for-the-badge)](aoc_2020/README.md)
 
 ## Usage

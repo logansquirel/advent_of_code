@@ -2,7 +2,7 @@
 set -e
 
 cargo fmt
-cargo check --workspace --all-targets --all-features
+mdl -ag .
 cargo clean
 cargo clippy --workspace --all-targets --all-features
 cargo build --workspace --all-targets --all-features

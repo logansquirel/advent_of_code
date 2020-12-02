@@ -11,23 +11,30 @@ language you like.
 - [AoC 2017: https://adventofcode.com/2017](https://adventofcode.com/2017)
 - [AoC 2018: https://adventofcode.com/2018](https://adventofcode.com/2018)
 - [AoC 2019: https://adventofcode.com/2019](https://adventofcode.com/2019)
+- [AoC 2020: https://adventofcode.com/2020](https://adventofcode.com/2020)
 
 ## Solutions
 
-![CI](https://github.com/logansquirel/Advent_of_Code/workflows/CI/badge.svg)
+![CI](https://img.shields.io/github/workflow/status/logansquirel/Advent_of_Code/CI?color=b48ead&label=CI&logo=github&style=for-the-badge)
 
 This repository is a collection of possible solution to each puzzle using the
 [Rust](https://www.rust-lang.org/) programming language.
 
-- [![AoC-2015](https://img.shields.io/badge/AoC--2015-%206%20%E2%98%85%20-blue)](aoc_2015/README.md)
-- [![AoC-2016](https://img.shields.io/badge/AoC--2016-%206%20%E2%98%85%20-blue)](aoc_2016/README.md)
-- [![AoC-2017](https://img.shields.io/badge/AoC--2017-%206%20%E2%98%85%20-blue)](aoc_2017/README.md)
-- [![AoC-2018](https://img.shields.io/badge/AoC--2018-%204%20%E2%98%85%20-blue)](aoc_2018/README.md)
-- [![AoC-2019](https://img.shields.io/badge/AoC--2019-%204%20%E2%98%85%20-blue)](aoc_2019/README.md)
+[![AoC-2015](https://img.shields.io/badge/AoC--2015-6%20%E2%98%85-5e81ac?style=for-the-badge)](aoc_2015/README.md)
+
+[![AoC-2016](https://img.shields.io/badge/AoC--2016-6%20%E2%98%85-5e81ac?style=for-the-badge)](aoc_2016/README.md)
+
+[![AoC-2017](https://img.shields.io/badge/AoC--2017-6%20%E2%98%85-5e81ac?style=for-the-badge)](aoc_2017/README.md)
+
+[![AoC-2018](https://img.shields.io/badge/AoC--2018-4%20%E2%98%85-5e81ac?style=for-the-badge)](aoc_2018/README.md)
+
+[![AoC-2019](https://img.shields.io/badge/AoC--2019-4%20%E2%98%85-5e81ac?style=for-the-badge)](aoc_2019/README.md)
+
+[![AoC-2020](https://img.shields.io/badge/AoC--2020-0%20%E2%98%85-5e81ac?style=for-the-badge)](aoc_2020/README.md)
 
 ## Usage
 
-```shell-session
+```console
 $ git clone https://github.com/logansquirel/Advent_of_Code.git
 $ cd aoc_yyyy/day_dd
 $ cargo run --quiet --release < input/input.dat

@@ -1,13 +1,13 @@
-# Advent of Code -- 2019
+# Advent of Code -- 2020
 
-Event available at: <https://adventofcode.com/2019>
+Event available at: <https://adventofcode.com/2020>
 
 ## Days
 
 |Day|Completion|
 |---|----------|
-|01|[★★](day_01/readme.md)|
-|02|[★★](day_02/readme.md)|
+|01|[☆☆](day_01/readme.md)|
+|02|[☆☆](day_02/readme.md)|
 |03|[☆☆](day_03/readme.md)|
 |04|[☆☆](day_04/readme.md)|
 |05|[☆☆](day_05/readme.md)|

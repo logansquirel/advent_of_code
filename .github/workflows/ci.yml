@@ -1,6 +1,5 @@
 name: CI
 
-# checks on push and pull request (master branch)
 on:
   push:
     branches: [ master ]
@@ -8,98 +7,50 @@ on:
     branches: [ master ]
 
 jobs:
-  # check mardown format:
-  # sources:
-  #   - https://github.com/markdownlint/markdownlint (markdownlint ruby)
-  #   - https://github.com/DavidAnson/markdownlint (markdownlint Node.js)
-  #   - https://github.com/igorshubovych/markdownlint-cli (markdownlint CLI)
-  # npm used for installation
-  # npx used for running
   markdown:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
-    - name: checkout repository
-      uses: actions/checkout@v2
-    - name: install markdownlint-cli
-      run: npm install markdownlint-cli
-    - name: check markdown file(s)
-      run: npx markdownlint '**/*.md' --ignore node_modules
+    - name: checkout
+      uses: logansquirel/action-checkout@v0.1
+    - name: markdownlint
+      uses: logansquirel/action-markdownlint@v0.1
 
-  # build in release mode
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout repository
-      uses: actions/checkout@v2
-    - name: setup Rust toolchain
-      uses: actions-rs/toolchain@v1
-      with:
-        profile: minimal
-        default: true
-        override: true
-        toolchain: stable
-    - name: cargo build
-      uses: actions-rs/cargo@v1
-      with:
-        command: build
-        args: --release --workspace --all-targets --all-features
+    - name: checkout
+      uses: logansquirel/action-checkout@v0.1
+    - name: rust
+      uses: logansquirel/action-setup-rust@v0.1
+    - name: build
+      run: cargo build
 
-  # test in debug mode
   test:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout repository
-      uses: actions/checkout@v2
-    - name: setup Rust toolchain
-      uses: actions-rs/toolchain@v1
-      with:
-        profile: minimal
-        default: true
-        override: true
-        toolchain: stable
-    - name: cargo test
-      uses: actions-rs/cargo@v1
-      with:
-        command: test
-        args: --workspace --all-targets --all-features
+    - name: checkout
+      uses: logansquirel/action-checkout@v0.1
+    - name: rust
+      uses: logansquirel/action-setup-rust@v0.1
+    - name: test
+      run: cargo test
 
-  # Rust code format checks
   fmt:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout repository
-      uses: actions/checkout@v2
-    - name: setup Rust toolchain
-      uses: actions-rs/toolchain@v1
-      with:
-        profile: minimal
-        default: true
-        override: true
-        toolchain: stable
-        components: rustfmt
-    - name: cargo fmt
-      uses: actions-rs/cargo@v1
-      with:
-        command: fmt
-        args: --all -- --check
+    - name: checkout
+      uses: logansquirel/action-checkout@v0.1
+    - name: rust
+      uses: logansquirel/action-setup-rust@v0.1
+    - name: format
+      run: cargo fmt --all -- --check
 
-  # Rust lint checks
-  # All lints are denied for fast errors
   clippy:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout repository
-      uses: actions/checkout@v2
-    - name: setup Rust toolchain
-      uses: actions-rs/toolchain@v1
-      with:
-        profile: minimal
-        default: true
-        override: true
-        toolchain: stable
-        components: clippy
-    - name: cargo clippy
-      uses: actions-rs/cargo@v1
-      with:
-        command: clippy
-        args: --workspace --all-targets --all-features -- -D warnings
+    - name: checkout
+      uses: logansquirel/action-checkout@v0.1
+    - name: rust
+      uses: logansquirel/action-setup-rust@v0.1
+    - name: clippy
+      run: cargo clippy -- -D clippy::all

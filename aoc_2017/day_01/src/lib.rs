@@ -34,52 +34,47 @@ pub fn puzzle_two(input: &str) -> u32 {
     sum
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+#[test]
+fn puzzle_one_example_one() {
+    assert_eq!(3, puzzle_one("1122"));
+}
 
-    #[test]
-    fn puzzle_one_example_one() {
-        assert_eq!(3, puzzle_one("1122"));
-    }
+#[test]
+fn puzzle_one_example_two() {
+    assert_eq!(4, puzzle_one("1111"));
+}
 
-    #[test]
-    fn puzzle_one_example_two() {
-        assert_eq!(4, puzzle_one("1111"));
-    }
+#[test]
+fn puzzle_one_example_three() {
+    assert_eq!(0, puzzle_one("1234"));
+}
 
-    #[test]
-    fn puzzle_one_example_three() {
-        assert_eq!(0, puzzle_one("1234"));
-    }
+#[test]
+fn puzzle_one_example_four() {
+    assert_eq!(9, puzzle_one("91212129"));
+}
 
-    #[test]
-    fn puzzle_one_example_four() {
-        assert_eq!(9, puzzle_one("91212129"));
-    }
+#[test]
+fn puzzle_two_example_one() {
+    assert_eq!(6, puzzle_two("1212"));
+}
 
-    #[test]
-    fn puzzle_two_example_one() {
-        assert_eq!(6, puzzle_two("1212"));
-    }
+#[test]
+fn puzzle_two_example_two() {
+    assert_eq!(0, puzzle_two("1221"));
+}
 
-    #[test]
-    fn puzzle_two_example_two() {
-        assert_eq!(0, puzzle_two("1221"));
-    }
+#[test]
+fn puzzle_two_example_three() {
+    assert_eq!(4, puzzle_two("123425"));
+}
 
-    #[test]
-    fn puzzle_two_example_three() {
-        assert_eq!(4, puzzle_two("123425"));
-    }
+#[test]
+fn puzzle_two_example_four() {
+    assert_eq!(12, puzzle_two("123123"));
+}
 
-    #[test]
-    fn puzzle_two_example_four() {
-        assert_eq!(12, puzzle_two("123123"));
-    }
-
-    #[test]
-    fn puzzle_two_example_five() {
-        assert_eq!(4, puzzle_two("12131415"));
-    }
+#[test]
+fn puzzle_two_example_five() {
+    assert_eq!(4, puzzle_two("12131415"));
 }

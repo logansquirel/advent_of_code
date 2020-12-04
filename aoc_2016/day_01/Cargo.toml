@@ -4,4 +4,11 @@ version = "1.0.0"
 authors = ["Logan SQUIREL <logan.squirel@protonmail.com>"]
 edition = "2018"
 
+[lib]
+doctest = false
+
+[[bin]]
+name = "aoc_2016_day_01"
+test = false
+
 [dependencies]

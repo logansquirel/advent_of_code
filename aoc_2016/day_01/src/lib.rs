@@ -111,27 +111,22 @@ impl Coordinates {
     }
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+#[test]
+fn puzzle_one_example_one() {
+    assert_eq!(5, puzzle_one("R2, L3"));
+}
 
-    #[test]
-    fn puzzle_one_example_one() {
-        assert_eq!(5, puzzle_one("R2, L3"));
-    }
+#[test]
+fn puzzle_one_example_two() {
+    assert_eq!(2, puzzle_one("R2, R2, R2"));
+}
 
-    #[test]
-    fn puzzle_one_example_two() {
-        assert_eq!(2, puzzle_one("R2, R2, R2"));
-    }
+#[test]
+fn puzzle_one_example_three() {
+    assert_eq!(12, puzzle_one("R5, L5, R5, R3"));
+}
 
-    #[test]
-    fn puzzle_one_example_three() {
-        assert_eq!(12, puzzle_one("R5, L5, R5, R3"));
-    }
-
-    #[test]
-    fn puzzle_two_example() {
-        assert_eq!(4, puzzle_two("R8, R4, R4, R8"));
-    }
+#[test]
+fn puzzle_two_example() {
+    assert_eq!(4, puzzle_two("R8, R4, R4, R8"));
 }

@@ -25,46 +25,41 @@ pub fn puzzle_two(input: &str) -> usize {
     panic!("basement not found")
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+#[test]
+fn puzzle_one_example_one() {
+    assert_eq!(0, puzzle_one("(())"));
+    assert_eq!(0, puzzle_one("()()"));
+}
 
-    #[test]
-    fn puzzle_one_example_one() {
-        assert_eq!(0, puzzle_one("(())"));
-        assert_eq!(0, puzzle_one("()()"));
-    }
+#[test]
+fn puzzle_one_example_two() {
+    assert_eq!(3, puzzle_one("((("));
+    assert_eq!(3, puzzle_one("(()(()("));
+}
 
-    #[test]
-    fn puzzle_one_example_two() {
-        assert_eq!(3, puzzle_one("((("));
-        assert_eq!(3, puzzle_one("(()(()("));
-    }
+#[test]
+fn puzzle_one_example_three() {
+    assert_eq!(3, puzzle_one("))((((("));
+}
 
-    #[test]
-    fn puzzle_one_example_three() {
-        assert_eq!(3, puzzle_one("))((((("));
-    }
+#[test]
+fn puzzle_one_example_four() {
+    assert_eq!(-1, puzzle_one("())"));
+    assert_eq!(-1, puzzle_one("))("));
+}
 
-    #[test]
-    fn puzzle_one_example_four() {
-        assert_eq!(-1, puzzle_one("())"));
-        assert_eq!(-1, puzzle_one("))("));
-    }
+#[test]
+fn puzzle_one_example_five() {
+    assert_eq!(-3, puzzle_one(")))"));
+    assert_eq!(-3, puzzle_one(")())())"));
+}
 
-    #[test]
-    fn puzzle_one_example_five() {
-        assert_eq!(-3, puzzle_one(")))"));
-        assert_eq!(-3, puzzle_one(")())())"));
-    }
+#[test]
+fn puzzle_two_example_one() {
+    assert_eq!(1, puzzle_two(")"));
+}
 
-    #[test]
-    fn puzzle_two_example_one() {
-        assert_eq!(1, puzzle_two(")"));
-    }
-
-    #[test]
-    fn puzzle_two_example_two() {
-        assert_eq!(5, puzzle_two("()())"));
-    }
+#[test]
+fn puzzle_two_example_two() {
+    assert_eq!(5, puzzle_two("()())"));
 }

@@ -69,27 +69,22 @@ impl FromStr for Present {
     }
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+#[test]
+fn puzzle_one_example_one() {
+    assert_eq!(58, puzzle_one("2x3x4"));
+}
 
-    #[test]
-    fn puzzle_one_example_one() {
-        assert_eq!(58, puzzle_one("2x3x4"));
-    }
+#[test]
+fn puzzle_one_example_two() {
+    assert_eq!(43, puzzle_one("1x1x10"));
+}
 
-    #[test]
-    fn puzzle_one_example_two() {
-        assert_eq!(43, puzzle_one("1x1x10"));
-    }
+#[test]
+fn puzzle_two_example_one() {
+    assert_eq!(34, puzzle_two("2x3x4"));
+}
 
-    #[test]
-    fn puzzle_two_example_one() {
-        assert_eq!(34, puzzle_two("2x3x4"));
-    }
-
-    #[test]
-    fn puzzle_two_example_two() {
-        assert_eq!(14, puzzle_two("1x1x10"));
-    }
+#[test]
+fn puzzle_two_example_two() {
+    assert_eq!(14, puzzle_two("1x1x10"));
 }

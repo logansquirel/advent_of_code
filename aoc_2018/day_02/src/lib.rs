@@ -44,23 +44,18 @@ fn compare_box_ids(id1: &str, id2: &str) -> Option<usize> {
     pos
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+#[test]
+fn puzzle_one_example() {
+    assert_eq!(
+        12,
+        puzzle_one("abcdef\nbababc\nabbcde\nabcccd\naabcdd\nabcdee\nababab")
+    );
+}
 
-    #[test]
-    fn puzzle_one_example() {
-        assert_eq!(
-            12,
-            puzzle_one("abcdef\nbababc\nabbcde\nabcccd\naabcdd\nabcdee\nababab")
-        );
-    }
-
-    #[test]
-    fn puzzle_two_example() {
-        assert_eq!(
-            String::from("fgij"),
-            puzzle_two("abcde\nfghij\nklmno\npqrst\nfguij\naxcye\nwvxyz")
-        );
-    }
+#[test]
+fn puzzle_two_example() {
+    assert_eq!(
+        String::from("fgij"),
+        puzzle_two("abcde\nfghij\nklmno\npqrst\nfguij\naxcye\nwvxyz")
+    );
 }

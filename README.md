@@ -60,4 +60,4 @@ Contributions and Pull Requests (PR) are welcome.
 
 ## License
 
-[MIT License](https://choosealicense.com/licenses/mit/)
+[![License](https://img.shields.io/badge/license-mit-81a1c1?style=for-the-badge)](LICENSE)

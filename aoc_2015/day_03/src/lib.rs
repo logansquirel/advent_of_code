@@ -63,37 +63,32 @@ impl Position {
     }
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+#[test]
+fn puzzle_one_example_one() {
+    assert_eq!(2, puzzle_one(">"));
+}
 
-    #[test]
-    fn puzzle_one_example_one() {
-        assert_eq!(2, puzzle_one(">"));
-    }
+#[test]
+fn puzzle_one_example_two() {
+    assert_eq!(4, puzzle_one("^>v<"));
+}
 
-    #[test]
-    fn puzzle_one_example_two() {
-        assert_eq!(4, puzzle_one("^>v<"));
-    }
+#[test]
+fn puzzle_one_example_three() {
+    assert_eq!(2, puzzle_one("^v^v^v^v^v"));
+}
 
-    #[test]
-    fn puzzle_one_example_three() {
-        assert_eq!(2, puzzle_one("^v^v^v^v^v"));
-    }
+#[test]
+fn puzzle_two_example_one() {
+    assert_eq!(3, puzzle_two("^v"));
+}
 
-    #[test]
-    fn puzzle_two_example_one() {
-        assert_eq!(3, puzzle_two("^v"));
-    }
+#[test]
+fn puzzle_two_example_two() {
+    assert_eq!(3, puzzle_two("^>v<"));
+}
 
-    #[test]
-    fn puzzle_two_example_two() {
-        assert_eq!(3, puzzle_two("^>v<"));
-    }
-
-    #[test]
-    fn puzzle_two_example_three() {
-        assert_eq!(11, puzzle_two("^v^v^v^v^v"));
-    }
+#[test]
+fn puzzle_two_example_three() {
+    assert_eq!(11, puzzle_two("^v^v^v^v^v"));
 }

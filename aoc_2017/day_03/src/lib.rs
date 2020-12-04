@@ -95,52 +95,47 @@ struct Square {
     value: u32,
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+#[test]
+fn puzzle_one_example_one() {
+    assert_eq!(0, puzzle_one("1"));
+}
 
-    #[test]
-    fn puzzle_one_example_one() {
-        assert_eq!(0, puzzle_one("1"));
-    }
+#[test]
+fn puzzle_one_example_two() {
+    assert_eq!(3, puzzle_one("12"));
+}
 
-    #[test]
-    fn puzzle_one_example_two() {
-        assert_eq!(3, puzzle_one("12"));
-    }
+#[test]
+fn puzzle_one_example_three() {
+    assert_eq!(2, puzzle_one("23"));
+}
 
-    #[test]
-    fn puzzle_one_example_three() {
-        assert_eq!(2, puzzle_one("23"));
-    }
+#[test]
+fn puzzle_one_example_four() {
+    assert_eq!(31, puzzle_one("1024"));
+}
 
-    #[test]
-    fn puzzle_one_example_four() {
-        assert_eq!(31, puzzle_one("1024"));
-    }
+#[test]
+fn puzzle_two_test_one() {
+    assert_eq!(1, puzzle_two("1"))
+}
 
-    #[test]
-    fn puzzle_two_test_one() {
-        assert_eq!(1, puzzle_two("1"))
-    }
+#[test]
+fn puzzle_two_test_two() {
+    assert_eq!(4, puzzle_two("3"))
+}
 
-    #[test]
-    fn puzzle_two_test_two() {
-        assert_eq!(4, puzzle_two("3"))
-    }
+#[test]
+fn puzzle_two_test_three() {
+    assert_eq!(23, puzzle_two("18"))
+}
 
-    #[test]
-    fn puzzle_two_test_three() {
-        assert_eq!(23, puzzle_two("18"))
-    }
+#[test]
+fn puzzle_two_test_four() {
+    assert_eq!(142, puzzle_two("140"))
+}
 
-    #[test]
-    fn puzzle_two_test_four() {
-        assert_eq!(142, puzzle_two("140"))
-    }
-
-    #[test]
-    fn puzzle_two_test_five() {
-        assert_eq!(806, puzzle_two("750"))
-    }
+#[test]
+fn puzzle_two_test_five() {
+    assert_eq!(806, puzzle_two("750"))
 }

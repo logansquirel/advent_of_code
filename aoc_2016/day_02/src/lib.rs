@@ -191,17 +191,12 @@ impl AdvancedKeyPad {
     }
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+#[test]
+fn puzzle_one_example() {
+    assert_eq!(String::from("1985"), puzzle_one("ULL\nRRDDD\nLURDL\nUUUUD"));
+}
 
-    #[test]
-    fn puzzle_one_example() {
-        assert_eq!(String::from("1985"), puzzle_one("ULL\nRRDDD\nLURDL\nUUUUD"));
-    }
-
-    #[test]
-    fn puzzle_two_example() {
-        assert_eq!(String::from("5DB3"), puzzle_two("ULL\nRRDDD\nLURDL\nUUUUD"));
-    }
+#[test]
+fn puzzle_two_example() {
+    assert_eq!(String::from("5DB3"), puzzle_two("ULL\nRRDDD\nLURDL\nUUUUD"));
 }

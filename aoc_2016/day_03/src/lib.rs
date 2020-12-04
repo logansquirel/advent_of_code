@@ -62,12 +62,7 @@ impl FromStr for Triangle {
     }
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn puzzle_one_example() {
-        assert!(!Triangle { sides: [5, 10, 25] }.is_valid())
-    }
+#[test]
+fn puzzle_one_example() {
+    assert!(!Triangle { sides: [5, 10, 25] }.is_valid())
 }

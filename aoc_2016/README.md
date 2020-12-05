@@ -4,8 +4,8 @@ Event available at: <https://adventofcode.com/2016>
 
 ## Days
 
-|Day|Completion    |Puzzle                                     |Solution                |
-|---|--------------|-------------------------------------------|------------------------|
+|Day|Completion|Puzzle|Solution|
+|---|---|---|---|
 |01 |[★★](day_01)|[AoC](https://adventofcode.com/2016/day/1) |[src](day_01/src/lib.rs)|
 |02 |[★★](day_02)|[AoC](https://adventofcode.com/2016/day/2) |[src](day_02/src/lib.rs)|
 |03 |[★★](day_03)|[AoC](https://adventofcode.com/2016/day/3) |[src](day_03/src/lib.rs)|

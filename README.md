@@ -20,7 +20,7 @@ language you like.
 
 ## Solutions
 
-![CI](https://img.shields.io/github/workflow/status/logansquirel/Advent_of_Code/CI?color=b48ead&label=CI&logo=github&style=for-the-badge)
+[![CI](https://img.shields.io/github/workflow/status/logansquirel/advent_of_code/CI/master?color=b48ead&label=CI&logo=github&style=for-the-badge)](https://github.com/logansquirel/advent_of_code/actions?query=branch%3Amaster)
 
 This repository is a collection of possible solution to each puzzle using the
 [Rust](https://www.rust-lang.org/) programming language.

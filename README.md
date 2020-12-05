@@ -40,7 +40,7 @@ This repository is a collection of possible solution to each puzzle using the
 ## Usage
 
 ```console
-$ git clone https://github.com/logansquirel/Advent_of_Code.git
+$ git clone https://github.com/logansquirel/advent_of_code.git
 $ cd aoc_yyyy/day_dd
 $ cargo run --quiet --release < input/input.dat
 Advent of Code yyyy-dd

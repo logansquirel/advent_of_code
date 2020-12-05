@@ -6,12 +6,17 @@ language you like.
 
 ## Events
 
-- [AoC 2015: https://adventofcode.com/2015](https://adventofcode.com/2015)
-- [AoC 2016: https://adventofcode.com/2016](https://adventofcode.com/2016)
-- [AoC 2017: https://adventofcode.com/2017](https://adventofcode.com/2017)
-- [AoC 2018: https://adventofcode.com/2018](https://adventofcode.com/2018)
-- [AoC 2019: https://adventofcode.com/2019](https://adventofcode.com/2019)
-- [AoC 2020: https://adventofcode.com/2020](https://adventofcode.com/2020)
+[![AoC-2015](https://img.shields.io/badge/Advent_of_Code-2015-d08770?style=for-the-badge)](https://adventofcode.com/2015)
+
+[![AoC-2016](https://img.shields.io/badge/Advent_of_Code-2016-d08770?style=for-the-badge)](https://adventofcode.com/2016)
+
+[![AoC-2017](https://img.shields.io/badge/Advent_of_Code-2017-d08770?style=for-the-badge)](https://adventofcode.com/2017)
+
+[![AoC-2018](https://img.shields.io/badge/Advent_of_Code-2018-d08770?style=for-the-badge)](https://adventofcode.com/2018)
+
+[![AoC-2019](https://img.shields.io/badge/Advent_of_Code-2019-d08770?style=for-the-badge)](https://adventofcode.com/2019)
+
+[![AoC-2020](https://img.shields.io/badge/Advent_of_Code-2020-d08770?style=for-the-badge)](https://adventofcode.com/2020)
 
 ## Solutions
 
@@ -35,7 +40,7 @@ This repository is a collection of possible solution to each puzzle using the
 ## Usage
 
 ```console
-$ git clone https://github.com/logansquirel/Advent_of_Code.git
+$ git clone https://github.com/logansquirel/advent_of_code.git
 $ cd aoc_yyyy/day_dd
 $ cargo run --quiet --release < input/input.dat
 Advent of Code yyyy-dd

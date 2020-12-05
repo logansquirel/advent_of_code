@@ -34,6 +34,6 @@ Event available at: <https://adventofcode.com/2015>
 
 ★★: Puzzle 1 & 2 completed
 
-★☆: Puzzle 1 completed
+★☆: Puzzle 1 completed, Puzzle 2 not completed
 
 ☆☆: Puzzle 1 & 2 not completed

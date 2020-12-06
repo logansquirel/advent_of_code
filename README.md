@@ -1,4 +1,4 @@
-# Advent of Code
+# 🎄 Advent of Code 🎅
 
 Advent of Code is an annual Advent calendar of small programming puzzles for a
 variety of skill sets and skill levels that can be solved in any programming
@@ -20,7 +20,7 @@ language you like.
 
 ## Solutions
 
-![CI](https://img.shields.io/github/workflow/status/logansquirel/Advent_of_Code/CI?color=b48ead&label=CI&logo=github&style=for-the-badge)
+[![CI](https://img.shields.io/github/workflow/status/logansquirel/advent_of_code/CI/master?color=b48ead&label=CI&logo=github&style=for-the-badge)](https://github.com/logansquirel/advent_of_code/actions?query=branch%3Amaster)
 
 This repository is a collection of possible solution to each puzzle using the
 [Rust](https://www.rust-lang.org/) programming language.
@@ -55,6 +55,33 @@ Answer 2
 - Replace `dd` with the two digits day (0-padded)
 - (Optional) Replace the path `input/input.dat` with the path to your personal
   puzzle input.
+
+## Template
+
+This repository provides a [Rust](https://www.rust-lang.org/) template
+(`aoc_yyyy/day_dd`) for advent of code.
+
+```console
+$ tree aoc_yyyy
+aoc_yyyy
+└── day_dd
+    ├── Cargo.toml              # Cargo configuration file
+    ├── input
+    │   └── input.dat           # Puzzle input
+    ├── readme.md
+    ├── src
+    │   ├── lib.rs              # Puzzle solutions and unit tests
+    │   └── main.rs             # Puzzle main
+    └── tests
+        └── aoc_yyyy_day_dd.rs  # Puzzle answers tests
+
+4 directories, 6 files
+```
+
+- Replace all `yyyy` occurences with the four digits year
+- Replace all `dd` occurences with the two digits day (0-padded)
+- Implement solution in `lib.rs`
+- Verify answers in `aoc_yyyy_day_dd.rs`
 
 ## Questions, Issues, Contributing
 

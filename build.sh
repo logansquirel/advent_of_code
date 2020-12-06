@@ -4,6 +4,6 @@ set -e
 cargo fmt
 mdl -ag .
 cargo clean
-cargo clippy
-cargo build
-cargo test
+cargo clippy -- -D clippy::all
+cargo build --release
+cargo test --release

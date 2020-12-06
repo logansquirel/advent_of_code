@@ -56,6 +56,33 @@ Answer 2
 - (Optional) Replace the path `input/input.dat` with the path to your personal
   puzzle input.
 
+## Template
+
+This repository provides a [Rust](https://www.rust-lang.org/) template
+(`aoc_yyyy/day_dd`) for advent of code.
+
+```console
+$ tree aoc_yyyy
+aoc_yyyy
+└── day_dd
+    ├── Cargo.toml              # Cargo configuration file
+    ├── input
+    │   └── input.dat           # Puzzle input
+    ├── readme.md
+    ├── src
+    │   ├── lib.rs              # Puzzle solutions and unit tests
+    │   └── main.rs             # Puzzle main
+    └── tests
+        └── aoc_yyyy_day_dd.rs  # Puzzle answers tests
+
+4 directories, 6 files
+```
+
+- Replace all `yyyy` occurences with the four digits year
+- Replace all `dd` occurences with the two digits day (0-padded)
+- Implement solution in `lib.rs`
+- Verify answers in `aoc_yyyy_day_dd.rs`
+
 ## Questions, Issues, Contributing
 
 For questions and issues, open an issue

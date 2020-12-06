@@ -1,4 +1,4 @@
-pub fn puzzle_one(input: &str) -> i32 {
+pub fn part_one(input: &str) -> i32 {
     let mut floor = 0;
     for char in input.trim().chars() {
         match char {
@@ -10,7 +10,7 @@ pub fn puzzle_one(input: &str) -> i32 {
     floor
 }
 
-pub fn puzzle_two(input: &str) -> usize {
+pub fn part_two(input: &str) -> usize {
     let mut floor = 0;
     for (pos, char) in input.trim().char_indices() {
         match char {
@@ -26,40 +26,40 @@ pub fn puzzle_two(input: &str) -> usize {
 }
 
 #[test]
-fn puzzle_one_example_one() {
-    assert_eq!(0, puzzle_one("(())"));
-    assert_eq!(0, puzzle_one("()()"));
+fn part_one_example_one() {
+    assert_eq!(0, part_one("(())"));
+    assert_eq!(0, part_one("()()"));
 }
 
 #[test]
-fn puzzle_one_example_two() {
-    assert_eq!(3, puzzle_one("((("));
-    assert_eq!(3, puzzle_one("(()(()("));
+fn part_one_example_two() {
+    assert_eq!(3, part_one("((("));
+    assert_eq!(3, part_one("(()(()("));
 }
 
 #[test]
-fn puzzle_one_example_three() {
-    assert_eq!(3, puzzle_one("))((((("));
+fn part_one_example_three() {
+    assert_eq!(3, part_one("))((((("));
 }
 
 #[test]
-fn puzzle_one_example_four() {
-    assert_eq!(-1, puzzle_one("())"));
-    assert_eq!(-1, puzzle_one("))("));
+fn part_one_example_four() {
+    assert_eq!(-1, part_one("())"));
+    assert_eq!(-1, part_one("))("));
 }
 
 #[test]
-fn puzzle_one_example_five() {
-    assert_eq!(-3, puzzle_one(")))"));
-    assert_eq!(-3, puzzle_one(")())())"));
+fn part_one_example_five() {
+    assert_eq!(-3, part_one(")))"));
+    assert_eq!(-3, part_one(")())())"));
 }
 
 #[test]
-fn puzzle_two_example_one() {
-    assert_eq!(1, puzzle_two(")"));
+fn part_two_example_one() {
+    assert_eq!(1, part_two(")"));
 }
 
 #[test]
-fn puzzle_two_example_two() {
-    assert_eq!(5, puzzle_two("()())"));
+fn part_two_example_two() {
+    assert_eq!(5, part_two("()())"));
 }

@@ -2,7 +2,7 @@
 
 ## [1202 Program Alarm](https://adventofcode.com/2019/day/2)
 
-### [Puzzle 1](https://adventofcode.com/2019/day/2#part1)
+### [Part 1](https://adventofcode.com/2019/day/2#part1)
 
 On the way to your gravity assist around the Moon, your ship computer beeps
 angrily about a "1202 program alarm". On the radio, an Elf is already explaining
@@ -95,7 +95,7 @@ before the last computer caught fire. To do this, before running the program,
 replace position `1` with the value `12` and replace position `2` with the value
 `2`. **What value is left at position `0` after the program halts?**
 
-### [Puzzle 2](https://adventofcode.com/2019/day/2#part2)
+### [Part 2](https://adventofcode.com/2019/day/2#part2)
 
 "Good, the new computer seems to be working correctly! Keep it nearby during
 this mission - you'll probably use it again. Real Intcode computers support many

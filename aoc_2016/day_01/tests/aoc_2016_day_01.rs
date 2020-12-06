@@ -1,14 +1,14 @@
-use aoc_2016_day_01::puzzle_one;
-use aoc_2016_day_01::puzzle_two;
+use aoc_2016_day_01::part_one;
+use aoc_2016_day_01::part_two;
 
 #[test]
-fn puzzle_one_answer() {
+fn part_one_answer() {
     let input = include_str!("../input/input.dat");
-    assert_eq!(226, puzzle_one(input));
+    assert_eq!(226, part_one(input));
 }
 
 #[test]
-fn puzzle_two_answer() {
+fn part_two_answer() {
     let input = include_str!("../input/input.dat");
-    assert_eq!(79, puzzle_two(input));
+    assert_eq!(79, part_two(input));
 }

@@ -2,6 +2,6 @@
 
 ## [Title](https://adventofcode.com/yyyy/day/dd)
 
-### [Puzzle 1](https://adventofcode.com/yyyy/day/dd#part1)
+### [Part 1](https://adventofcode.com/yyyy/day/dd#part1)
 
-### [Puzzle 2](https://adventofcode.com/yyyy/day/dd#part2)
+### [Part 2](https://adventofcode.com/yyyy/day/dd#part2)

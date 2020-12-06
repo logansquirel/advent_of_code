@@ -2,7 +2,7 @@
 
 ## [Inverse Captcha](https://adventofcode.com/2017/day/1)
 
-### [Puzzle 1](https://adventofcode.com/2017/day/1#part1)
+### [Part 1](https://adventofcode.com/2017/day/1#part1)
 
 The night before Christmas, one of Santa's Elves calls you in a panic. "The
 printer's broken! We can't print the Naughty or Nice List!" By the time you make
@@ -44,7 +44,7 @@ For example:
 
 **What is the solution to your captcha?**
 
-### [Puzzle 2](https://adventofcode.com/2017/day/1#part2)
+### [Part 2](https://adventofcode.com/2017/day/1#part2)
 
 You notice a progress bar that jumps to 50% completion. Apparently, the door
 isn't yet satisfied, but it did emit a star as encouragement. The instructions

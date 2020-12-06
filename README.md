@@ -44,10 +44,10 @@ $ git clone https://github.com/logansquirel/advent_of_code.git
 $ cd aoc_yyyy/day_dd
 $ cargo run --quiet --release < input/input.dat
 Advent of Code yyyy-dd
------- Puzzle 1 ------
+------ Part 1 ------
 Answer 1
 
------- Puzzle 2 ------
+------ Part 2 ------
 Answer 2
 ```
 

@@ -2,7 +2,7 @@
 
 ## [Not Quite Lisp](https://adventofcode.com/2015/day/1)
 
-### [Puzzle 1](https://adventofcode.com/2015/day/1#part1)
+### [Part 1](https://adventofcode.com/2015/day/1#part1)
 
 Santa was hoping for a white Christmas, but his weather machine's "snow"
 function is powered by stars, and he's fresh out! To save Christmas, he needs
@@ -35,7 +35,7 @@ For example:
 
 **To what floor do the instructions take Santa?**
 
-### [Puzzle 2](https://adventofcode.com/2015/day/1#part2)
+### [Part 2](https://adventofcode.com/2015/day/1#part2)
 
 Now, given the same instructions, find the position of the first character that
 causes him to enter the basement (floor `-1`).  The first character in the

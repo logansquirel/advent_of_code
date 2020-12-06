@@ -2,7 +2,7 @@
 
 ## [Bathroom Security](https://adventofcode.com/2016/day/2)
 
-### [Puzzle 1](https://adventofcode.com/2016/day/2#part1)
+### [Part 1](https://adventofcode.com/2016/day/2#part1)
 
 You arrive at Easter Bunny Headquarters under cover of darkness. However, you
 left in such a rush that you forgot to use the bathroom! Fancy office buildings
@@ -53,7 +53,7 @@ So, in this example, the bathroom code is 1985.
 Your puzzle input is the instructions from the document you found at the front
 desk. **What is the bathroom code?**
 
-### [Puzzle 2](https://adventofcode.com/2016/day/2#part2)
+### [Part 2](https://adventofcode.com/2016/day/2#part2)
 
 You finally arrive at the bathroom (it's a several minute walk from the lobby so
 visitors can behold the many fancy conference rooms and water coolers on this

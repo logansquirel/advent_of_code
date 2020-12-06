@@ -4,7 +4,7 @@
 
 [![AoC-2017](https://img.shields.io/badge/Advent_of_Code-2017-d08770?style=for-the-badge)](https://adventofcode.com/2017)
 
-## Puzzles
+## Parts
 
 |Puzzle|Completion|Solution|Input|
 |---|:-:|---|:-:|
@@ -34,8 +34,8 @@
 |[![AoC](https://img.shields.io/badge/AoC--2017-day_24-ebcb8b?style=flat-square)](https://adventofcode.com/2017/day/24)|[☆☆](day_24)|[![src](https://img.shields.io/badge/Rust-day__24.rs-8fbcbb?logo=rust&style=flat-square)](day_24/src/lib.rs)|[🔗](day_24/input/input.dat)|
 |[![AoC](https://img.shields.io/badge/AoC--2017-day_25-ebcb8b?style=flat-square)](https://adventofcode.com/2017/day/25)|[☆☆](day_25)|[![src](https://img.shields.io/badge/Rust-day__25.rs-8fbcbb?logo=rust&style=flat-square)](day_25/src/lib.rs)|[🔗](day_25/input/input.dat)|
 
-★★: Puzzle 1 & 2 completed
+★★: Part 1 & 2 completed
 
-★☆: Puzzle 1 completed, Puzzle 2 not completed
+★☆: Part 1 completed, Part 2 not completed
 
-☆☆: Puzzle 1 & 2 not completed
+☆☆: Part 1 & 2 not completed

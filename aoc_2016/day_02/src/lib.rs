@@ -1,4 +1,4 @@
-pub fn puzzle_one(input: &str) -> String {
+pub fn part_one(input: &str) -> String {
     let mut code = String::new();
     let mut pos = BasicKeyPad::new(5);
     for line in input.trim().lines() {
@@ -16,7 +16,7 @@ pub fn puzzle_one(input: &str) -> String {
     code
 }
 
-pub fn puzzle_two(input: &str) -> String {
+pub fn part_two(input: &str) -> String {
     let mut code = String::new();
     let mut pos = AdvancedKeyPad::new('5');
     for line in input.trim().lines() {
@@ -192,11 +192,11 @@ impl AdvancedKeyPad {
 }
 
 #[test]
-fn puzzle_one_example() {
-    assert_eq!(String::from("1985"), puzzle_one("ULL\nRRDDD\nLURDL\nUUUUD"));
+fn part_one_example() {
+    assert_eq!(String::from("1985"), part_one("ULL\nRRDDD\nLURDL\nUUUUD"));
 }
 
 #[test]
-fn puzzle_two_example() {
-    assert_eq!(String::from("5DB3"), puzzle_two("ULL\nRRDDD\nLURDL\nUUUUD"));
+fn part_two_example() {
+    assert_eq!(String::from("5DB3"), part_two("ULL\nRRDDD\nLURDL\nUUUUD"));
 }

@@ -2,7 +2,7 @@
 
 ## [The Tyranny of the Rocket Equation](https://adventofcode.com/2019/day/1)
 
-### [Puzzle 1](https://adventofcode.com/2019/day/1#part1)
+### [Part 1](https://adventofcode.com/2019/day/1#part1)
 
 Santa has become stranded at the edge of the Solar System while delivering
 presents to other planets! To accurately calculate his position in space, safely
@@ -38,7 +38,7 @@ input), then add together all the fuel values.
 **What is the sum of the fuel requirements for all of the modules on your
 spacecraft?**
 
-### [Puzzle 2](https://adventofcode.com/2019/day/1#part2)
+### [Part 2](https://adventofcode.com/2019/day/1#part2)
 
 During the second Go / No Go poll, the Elf in charge of the Rocket Equation
 Double-Checker stops the launch sequence. Apparently, you forgot to include

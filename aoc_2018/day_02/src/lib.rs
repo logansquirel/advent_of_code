@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-pub fn puzzle_one(input: &str) -> u32 {
+pub fn part_one(input: &str) -> u32 {
     let mut twice = 0;
     let mut three = 0;
     for line in input.trim().lines() {
@@ -18,7 +18,7 @@ pub fn puzzle_one(input: &str) -> u32 {
     twice * three
 }
 
-pub fn puzzle_two(input: &str) -> String {
+pub fn part_two(input: &str) -> String {
     let mut common = String::new();
     for (line, id1) in input.trim().lines().enumerate() {
         for id2 in input.trim().lines().skip(line) {
@@ -45,17 +45,17 @@ fn compare_box_ids(id1: &str, id2: &str) -> Option<usize> {
 }
 
 #[test]
-fn puzzle_one_example() {
+fn part_one_example() {
     assert_eq!(
         12,
-        puzzle_one("abcdef\nbababc\nabbcde\nabcccd\naabcdd\nabcdee\nababab")
+        part_one("abcdef\nbababc\nabbcde\nabcccd\naabcdd\nabcdee\nababab")
     );
 }
 
 #[test]
-fn puzzle_two_example() {
+fn part_two_example() {
     assert_eq!(
         String::from("fgij"),
-        puzzle_two("abcde\nfghij\nklmno\npqrst\nfguij\naxcye\nwvxyz")
+        part_two("abcde\nfghij\nklmno\npqrst\nfguij\naxcye\nwvxyz")
     );
 }

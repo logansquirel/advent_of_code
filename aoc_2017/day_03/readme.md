@@ -2,7 +2,7 @@
 
 ## [Spiral Memory](https://adventofcode.com/2017/day/3)
 
-### [Puzzle 1](https://adventofcode.com/2017/day/3#part1)
+### [Part 1](https://adventofcode.com/2017/day/3#part1)
 
 You come across an experimental new kind of memory stored on an infinite
 two-dimensional grid.
@@ -35,7 +35,7 @@ For example:
 **How many steps are required to carry the data from the square identified in
 your puzzle input all the way to the access port?**
 
-### [Puzzle 2](https://adventofcode.com/2017/day/3#part2)
+### [Part 2](https://adventofcode.com/2017/day/3#part2)
 
 As a stress test on the system, the programs here clear the grid and then store
 the value `1` in square `1`. Then, in the same allocation order as shown above,

@@ -2,7 +2,7 @@
 
 ## [Inventory Management System](https://adventofcode.com/2018/day/2)
 
-### [Puzzle 1](https://adventofcode.com/2018/day/2#part1)
+### [Part 1](https://adventofcode.com/2018/day/2#part1)
 
 You stop falling through time, catch your breath, and check the screen on the
 device. "Destination reached. Current Year: 1518. Current Location: North Pole
@@ -47,7 +47,7 @@ these together produces a checksum of `4 * 3 = 12`.
 
 **What is the checksum for your list of box IDs?**
 
-### [Puzzle 2](https://adventofcode.com/2018/day/2#part2)
+### [Part 2](https://adventofcode.com/2018/day/2#part2)
 
 Confident that your list of box IDs is complete, you're ready to find the boxes
 full of prototype fabric.

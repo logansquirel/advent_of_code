@@ -1,7 +1,7 @@
 use std::num::ParseIntError;
 use std::str::FromStr;
 
-pub fn puzzle_one(input: &str) -> u32 {
+pub fn part_one(input: &str) -> u32 {
     input
         .trim()
         .lines()
@@ -10,7 +10,7 @@ pub fn puzzle_one(input: &str) -> u32 {
         .sum()
 }
 
-pub fn puzzle_two(input: &str) -> u32 {
+pub fn part_two(input: &str) -> u32 {
     input
         .trim()
         .lines()
@@ -70,21 +70,21 @@ impl FromStr for Present {
 }
 
 #[test]
-fn puzzle_one_example_one() {
-    assert_eq!(58, puzzle_one("2x3x4"));
+fn part_one_example_one() {
+    assert_eq!(58, part_one("2x3x4"));
 }
 
 #[test]
-fn puzzle_one_example_two() {
-    assert_eq!(43, puzzle_one("1x1x10"));
+fn part_one_example_two() {
+    assert_eq!(43, part_one("1x1x10"));
 }
 
 #[test]
-fn puzzle_two_example_one() {
-    assert_eq!(34, puzzle_two("2x3x4"));
+fn part_two_example_one() {
+    assert_eq!(34, part_two("2x3x4"));
 }
 
 #[test]
-fn puzzle_two_example_two() {
-    assert_eq!(14, puzzle_two("1x1x10"));
+fn part_two_example_two() {
+    assert_eq!(14, part_two("1x1x10"));
 }

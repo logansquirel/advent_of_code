@@ -2,7 +2,7 @@
 
 ## [Corruption Checksum](https://adventofcode.com/2017/day/2)
 
-### [Puzzle 1](https://adventofcode.com/2017/day/2#part1)
+### [Part 1](https://adventofcode.com/2017/day/2#part1)
 
 As you walk through the door, a glowing humanoid shape yells in your direction.
 "You there! Your state appears to be idle. Come help us repair the corruption in
@@ -33,7 +33,7 @@ In this example, the spreadsheet's checksum would be `8 + 4 + 6 = 18`.
 
 **What is the checksum for the spreadsheet in your puzzle input?**
 
-### [Puzzle 2](https://adventofcode.com/2017/day/2#part2)
+### [Part 2](https://adventofcode.com/2017/day/2#part2)
 
 "Great work; looks like we're on the right track after all. Here's a star for
 your effort." However, the program seems a little worried. Can programs be

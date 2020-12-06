@@ -1,6 +1,6 @@
 use std::collections::HashSet;
 
-pub fn puzzle_one(input: &str) -> i32 {
+pub fn part_one(input: &str) -> i32 {
     let square = input
         .trim()
         .parse::<i32>()
@@ -20,7 +20,7 @@ pub fn puzzle_one(input: &str) -> i32 {
     (spiral - 1) + dist_to_side_center
 }
 
-pub fn puzzle_two(input: &str) -> u32 {
+pub fn part_two(input: &str) -> u32 {
     let limit = input
         .trim()
         .parse::<u32>()
@@ -96,46 +96,46 @@ struct Square {
 }
 
 #[test]
-fn puzzle_one_example_one() {
-    assert_eq!(0, puzzle_one("1"));
+fn part_one_example_one() {
+    assert_eq!(0, part_one("1"));
 }
 
 #[test]
-fn puzzle_one_example_two() {
-    assert_eq!(3, puzzle_one("12"));
+fn part_one_example_two() {
+    assert_eq!(3, part_one("12"));
 }
 
 #[test]
-fn puzzle_one_example_three() {
-    assert_eq!(2, puzzle_one("23"));
+fn part_one_example_three() {
+    assert_eq!(2, part_one("23"));
 }
 
 #[test]
-fn puzzle_one_example_four() {
-    assert_eq!(31, puzzle_one("1024"));
+fn part_one_example_four() {
+    assert_eq!(31, part_one("1024"));
 }
 
 #[test]
-fn puzzle_two_test_one() {
-    assert_eq!(1, puzzle_two("1"))
+fn part_two_test_one() {
+    assert_eq!(1, part_two("1"))
 }
 
 #[test]
-fn puzzle_two_test_two() {
-    assert_eq!(4, puzzle_two("3"))
+fn part_two_test_two() {
+    assert_eq!(4, part_two("3"))
 }
 
 #[test]
-fn puzzle_two_test_three() {
-    assert_eq!(23, puzzle_two("18"))
+fn part_two_test_three() {
+    assert_eq!(23, part_two("18"))
 }
 
 #[test]
-fn puzzle_two_test_four() {
-    assert_eq!(142, puzzle_two("140"))
+fn part_two_test_four() {
+    assert_eq!(142, part_two("140"))
 }
 
 #[test]
-fn puzzle_two_test_five() {
-    assert_eq!(806, puzzle_two("750"))
+fn part_two_test_five() {
+    assert_eq!(806, part_two("750"))
 }

@@ -1,6 +1,6 @@
 use std::collections::HashSet;
 
-pub fn puzzle_one(input: &str) -> u32 {
+pub fn part_one(input: &str) -> u32 {
     let mut pos = Position {
         coordinates: Coordinates { x: 0, y: 0 },
         dir: Direction::North,
@@ -17,7 +17,7 @@ pub fn puzzle_one(input: &str) -> u32 {
     pos.coordinates.distance()
 }
 
-pub fn puzzle_two(input: &str) -> u32 {
+pub fn part_two(input: &str) -> u32 {
     let mut pos = Position {
         coordinates: Coordinates { x: 0, y: 0 },
         dir: Direction::North,
@@ -112,21 +112,21 @@ impl Coordinates {
 }
 
 #[test]
-fn puzzle_one_example_one() {
-    assert_eq!(5, puzzle_one("R2, L3"));
+fn part_one_example_one() {
+    assert_eq!(5, part_one("R2, L3"));
 }
 
 #[test]
-fn puzzle_one_example_two() {
-    assert_eq!(2, puzzle_one("R2, R2, R2"));
+fn part_one_example_two() {
+    assert_eq!(2, part_one("R2, R2, R2"));
 }
 
 #[test]
-fn puzzle_one_example_three() {
-    assert_eq!(12, puzzle_one("R5, L5, R5, R3"));
+fn part_one_example_three() {
+    assert_eq!(12, part_one("R5, L5, R5, R3"));
 }
 
 #[test]
-fn puzzle_two_example() {
-    assert_eq!(4, puzzle_two("R8, R4, R4, R8"));
+fn part_two_example() {
+    assert_eq!(4, part_two("R8, R4, R4, R8"));
 }

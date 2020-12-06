@@ -2,7 +2,7 @@
 
 ## [Chronal Calibration](https://adventofcode.com/2018/day/1)
 
-### [Puzzle 1](https://adventofcode.com/2018/day/1#part1)
+### [Part 1](https://adventofcode.com/2018/day/1#part1)
 
 "We've detected some temporal anomalies," one of Santa's Elves at the Temporal
 Anomaly Research and Detection Instrument Station tells you. She sounded pretty
@@ -51,7 +51,7 @@ Here are other example situations:
 **Starting with a frequency of zero, what is the resulting frequency after all
 of the changes in frequency have been applied?**
 
-### [Puzzle 2](https://adventofcode.com/2018/day/1#part2)
+### [Part 2](https://adventofcode.com/2018/day/1#part2)
 
 You notice that the device repeats the same frequency change list over and over.
 To calibrate the device, you need to find the first frequency it reaches twice.

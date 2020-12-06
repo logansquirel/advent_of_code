@@ -1,4 +1,4 @@
-pub fn puzzle_one(input: &str) -> i32 {
+pub fn part_one(input: &str) -> i32 {
     let mut vec: Vec<i32> = input
         .trim()
         .split(',')
@@ -10,7 +10,7 @@ pub fn puzzle_one(input: &str) -> i32 {
     vec[0]
 }
 
-pub fn puzzle_two(input: &str) -> i32 {
+pub fn part_two(input: &str) -> i32 {
     let initial_program: Vec<i32> = input
         .trim()
         .split(',')
@@ -71,7 +71,7 @@ impl IntCode {
 }
 
 #[test]
-fn puzzle_one_example_one() {
+fn part_one_example_one() {
     let mut program = vec![1, 9, 10, 3, 2, 3, 11, 0, 99, 30, 40, 50];
     let result = vec![3500, 9, 10, 70, 2, 3, 11, 0, 99, 30, 40, 50];
     IntCode::execute(&mut program);
@@ -79,7 +79,7 @@ fn puzzle_one_example_one() {
 }
 
 #[test]
-fn puzzle_one_example_two() {
+fn part_one_example_two() {
     let mut program = vec![1, 0, 0, 0, 99];
     let result = vec![2, 0, 0, 0, 99];
     IntCode::execute(&mut program);
@@ -87,7 +87,7 @@ fn puzzle_one_example_two() {
 }
 
 #[test]
-fn puzzle_one_example_three() {
+fn part_one_example_three() {
     let mut program = vec![2, 3, 0, 3, 99];
     let result = vec![2, 3, 0, 6, 99];
     IntCode::execute(&mut program);
@@ -95,7 +95,7 @@ fn puzzle_one_example_three() {
 }
 
 #[test]
-fn puzzle_one_example_four() {
+fn part_one_example_four() {
     let mut program = vec![2, 4, 4, 5, 99, 0];
     let result = vec![2, 4, 4, 5, 99, 9801];
     IntCode::execute(&mut program);
@@ -103,7 +103,7 @@ fn puzzle_one_example_four() {
 }
 
 #[test]
-fn puzzle_one_example_five() {
+fn part_one_example_five() {
     let mut program = vec![1, 1, 1, 4, 99, 5, 6, 0, 99];
     let result = vec![30, 1, 1, 4, 2, 5, 6, 0, 99];
     IntCode::execute(&mut program);

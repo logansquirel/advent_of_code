@@ -1,4 +1,4 @@
-pub fn puzzle_one(input: &str) -> u32 {
+pub fn part_one(input: &str) -> u32 {
     let vec: Vec<u32> = input
         .trim()
         .chars()
@@ -17,7 +17,7 @@ pub fn puzzle_one(input: &str) -> u32 {
     sum
 }
 
-pub fn puzzle_two(input: &str) -> u32 {
+pub fn part_two(input: &str) -> u32 {
     let vec: Vec<u32> = input
         .trim()
         .chars()
@@ -35,46 +35,46 @@ pub fn puzzle_two(input: &str) -> u32 {
 }
 
 #[test]
-fn puzzle_one_example_one() {
-    assert_eq!(3, puzzle_one("1122"));
+fn part_one_example_one() {
+    assert_eq!(3, part_one("1122"));
 }
 
 #[test]
-fn puzzle_one_example_two() {
-    assert_eq!(4, puzzle_one("1111"));
+fn part_one_example_two() {
+    assert_eq!(4, part_one("1111"));
 }
 
 #[test]
-fn puzzle_one_example_three() {
-    assert_eq!(0, puzzle_one("1234"));
+fn part_one_example_three() {
+    assert_eq!(0, part_one("1234"));
 }
 
 #[test]
-fn puzzle_one_example_four() {
-    assert_eq!(9, puzzle_one("91212129"));
+fn part_one_example_four() {
+    assert_eq!(9, part_one("91212129"));
 }
 
 #[test]
-fn puzzle_two_example_one() {
-    assert_eq!(6, puzzle_two("1212"));
+fn part_two_example_one() {
+    assert_eq!(6, part_two("1212"));
 }
 
 #[test]
-fn puzzle_two_example_two() {
-    assert_eq!(0, puzzle_two("1221"));
+fn part_two_example_two() {
+    assert_eq!(0, part_two("1221"));
 }
 
 #[test]
-fn puzzle_two_example_three() {
-    assert_eq!(4, puzzle_two("123425"));
+fn part_two_example_three() {
+    assert_eq!(4, part_two("123425"));
 }
 
 #[test]
-fn puzzle_two_example_four() {
-    assert_eq!(12, puzzle_two("123123"));
+fn part_two_example_four() {
+    assert_eq!(12, part_two("123123"));
 }
 
 #[test]
-fn puzzle_two_example_five() {
-    assert_eq!(4, puzzle_two("12131415"));
+fn part_two_example_five() {
+    assert_eq!(4, part_two("12131415"));
 }

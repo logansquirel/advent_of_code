@@ -1,7 +1,7 @@
 use std::num::ParseIntError;
 use std::str::FromStr;
 
-pub fn puzzle_one(input: &str) -> u32 {
+pub fn part_one(input: &str) -> u32 {
     input
         .trim()
         .lines()
@@ -10,7 +10,7 @@ pub fn puzzle_one(input: &str) -> u32 {
         .count() as u32
 }
 
-pub fn puzzle_two(input: &str) -> u32 {
+pub fn part_two(input: &str) -> u32 {
     let vec: Vec<u32> = input
         .trim()
         .lines()
@@ -63,6 +63,6 @@ impl FromStr for Triangle {
 }
 
 #[test]
-fn puzzle_one_example() {
+fn part_one_example() {
     assert!(!Triangle { sides: [5, 10, 25] }.is_valid())
 }

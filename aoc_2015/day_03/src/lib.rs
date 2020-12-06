@@ -1,6 +1,6 @@
 use std::collections::HashSet;
 
-pub fn puzzle_one(input: &str) -> u32 {
+pub fn part_one(input: &str) -> u32 {
     let mut position = Position::default();
     let mut seen = HashSet::new();
     seen.insert(position);
@@ -11,7 +11,7 @@ pub fn puzzle_one(input: &str) -> u32 {
     seen.len() as u32
 }
 
-pub fn puzzle_two(input: &str) -> u32 {
+pub fn part_two(input: &str) -> u32 {
     let mut position = Position::default();
     let mut seen = HashSet::new();
     seen.insert(position);
@@ -64,31 +64,31 @@ impl Position {
 }
 
 #[test]
-fn puzzle_one_example_one() {
-    assert_eq!(2, puzzle_one(">"));
+fn part_one_example_one() {
+    assert_eq!(2, part_one(">"));
 }
 
 #[test]
-fn puzzle_one_example_two() {
-    assert_eq!(4, puzzle_one("^>v<"));
+fn part_one_example_two() {
+    assert_eq!(4, part_one("^>v<"));
 }
 
 #[test]
-fn puzzle_one_example_three() {
-    assert_eq!(2, puzzle_one("^v^v^v^v^v"));
+fn part_one_example_three() {
+    assert_eq!(2, part_one("^v^v^v^v^v"));
 }
 
 #[test]
-fn puzzle_two_example_one() {
-    assert_eq!(3, puzzle_two("^v"));
+fn part_two_example_one() {
+    assert_eq!(3, part_two("^v"));
 }
 
 #[test]
-fn puzzle_two_example_two() {
-    assert_eq!(3, puzzle_two("^>v<"));
+fn part_two_example_two() {
+    assert_eq!(3, part_two("^>v<"));
 }
 
 #[test]
-fn puzzle_two_example_three() {
-    assert_eq!(11, puzzle_two("^v^v^v^v^v"));
+fn part_two_example_three() {
+    assert_eq!(11, part_two("^v^v^v^v^v"));
 }

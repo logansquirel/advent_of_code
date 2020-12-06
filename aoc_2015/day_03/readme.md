@@ -2,7 +2,7 @@
 
 ## [Perfectly Spherical Houses in a Vacuum](https://adventofcode.com/2015/day/3)
 
-### [Puzzle 1](https://adventofcode.com/2015/day/3#part1)
+### [Part 1](https://adventofcode.com/2015/day/3#part1)
 
 Santa is delivering presents to an infinite two-dimensional grid of houses.
 
@@ -25,7 +25,7 @@ For example:
 - `^v^v^v^v^v` delivers a bunch of presents to some very lucky children at only
   `2` houses.
 
-### [Puzzle 2](https://adventofcode.com/2015/day/3#part2)
+### [Part 2](https://adventofcode.com/2015/day/3#part2)
 
 The next year, to speed up the process, Santa creates a robot version of
 himself, Robo-Santa, to deliver presents with him.

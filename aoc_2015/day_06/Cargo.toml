@@ -1,0 +1,15 @@
+[package]
+name = "aoc_2015_day_06"
+version = "1.0.0"
+authors = ["Logan SQUIREL <logan.squirel@protonmail.com>"]
+edition = "2018"
+
+[lib]
+doctest = false
+
+[[bin]]
+name = "aoc_2015_day_06"
+test = false
+
+[dependencies]
+regex = "1"

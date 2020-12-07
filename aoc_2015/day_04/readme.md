@@ -1,8 +1,8 @@
 # Advent of Code -- Year 2015 - Day 04
 
-## [The Ideal Stocking Stuffer](https://adventofcode.com/2015/day/04)
+## [The Ideal Stocking Stuffer](https://adventofcode.com/2015/day/4)
 
-### [Part 1](https://adventofcode.com/2015/day/04#part1)
+### [Part 1](https://adventofcode.com/2015/day/4#part1)
 
 Santa needs help mining some AdventCoins (very similar to bitcoins) to use as
 gifts for all the economically forward-thinking little girls and boys.
@@ -22,6 +22,6 @@ For example:
   MD5 hash starting with five zeroes is `1048970`; that is, the MD5 hash of
   `pqrstuv1048970` looks like `000006136ef....`
 
-### [Part 2](https://adventofcode.com/2015/day/04#part2)
+### [Part 2](https://adventofcode.com/2015/day/4#part2)
 
 Now find one that starts with six zeroes.

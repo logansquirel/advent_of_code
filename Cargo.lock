@@ -40,6 +40,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "aoc_2015_day_07"
+version = "1.0.0"
+dependencies = [
+ "regex",
+]
+
+[[package]]
 name = "aoc_2016_day_01"
 version = "1.0.0"
 

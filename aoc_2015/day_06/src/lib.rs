@@ -9,15 +9,7 @@ pub use part_one::part_one;
 pub use part_two::part_two;
 
 fn initialize_lights<L: Light>() -> HashMap<Position, L> {
-    let mut map = HashMap::with_capacity(1_000_000);
-    for x in 0..1000 {
-        for y in 0..1000 {
-            let pos = Position::new(x, y);
-            let light = L::new();
-            map.insert(pos, light);
-        }
-    }
-    map
+    HashMap::with_capacity(1_000_000)
 }
 
 fn set_up_lights<L: Light>(instructions: &str, lights: &mut HashMap<Position, L>) {
@@ -62,7 +54,7 @@ fn operate_lights<L: Light>(
     for x in x_range {
         for y in y_range.clone() {
             let pos = Position::new(x, y);
-            let light = lights.get_mut(&pos).unwrap();
+            let light = lights.entry(pos).or_insert_with(L::new);
             operation(light);
         }
     }

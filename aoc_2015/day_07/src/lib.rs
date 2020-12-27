@@ -2,32 +2,22 @@ use regex::Regex;
 use std::collections::BTreeMap;
 
 pub fn part_one(input: &str) -> u16 {
-    let gates = init_gates(input.trim());
-    let mut wires = init_wires(&gates);
-    emulate_circuit(&gates, &mut wires);
-    wires.get("a").expect("wire 'a' not found").unwrap()
+    let circuit = init(input.trim());
+    signal("a", &circuit, &mut BTreeMap::new())
 }
 
 pub fn part_two(input: &str) -> u16 {
-    let gates = init_gates(input.trim());
-    let mut wires = init_wires(&gates);
-    emulate_circuit(&gates, &mut wires);
-    let a = wires.get("a").expect("wire 'a' nod found").unwrap();
-    for value in wires.values_mut() {
-        *value = None
-    }
-    wires.insert("b", Some(a));
-    emulate_circuit(&gates, &mut wires);
-    wires.get("a").expect("wire 'a' not found").unwrap()
+    let circuit = init(input.trim());
+    let mut signals = BTreeMap::new();
+    let a = signal("a", &circuit, &mut signals);
+    signals.clear();
+    signals.insert("b", a);
+    signal("a", &circuit, &mut signals)
 }
 
-fn emulate_circuit<'a>(gates: &[Gate<'a>], wires: &mut BTreeMap<&'a str, Option<u16>>) {
-    while wires.values().any(|o| o.is_none()) {
-        emulate(&gates, wires);
-    }
-}
+fn init<'a>(instructions: &'a str) -> BTreeMap<&'a str, Gate<'a>> {
+    let mut map = BTreeMap::new();
 
-fn init_gates(instructions: &str) -> Vec<Gate> {
     let buffer_regex = Regex::new(r"^([[:alnum:]]+) -> ([[:alpha:]]+)$").unwrap();
     let binary_gate_regex =
         Regex::new(r"^([[:alnum:]]+) (AND|OR) ([[:alpha:]]+) -> ([[:alpha:]]+)$").unwrap();
@@ -35,20 +25,18 @@ fn init_gates(instructions: &str) -> Vec<Gate> {
         Regex::new(r"^([[:alpha:]]+) (LSHIFT|RSHIFT) (\d+) -> ([[:alpha:]]+)$").unwrap();
     let unary_gate_regex = Regex::new(r"^(NOT) ([[:alpha:]]+) -> ([[:alpha:]]+)$").unwrap();
 
-    let mut gates = Vec::new();
     for instruction in instructions.lines() {
-        let gate = if let Some(caps) = buffer_regex.captures(instruction) {
+        let (gate, wire) = if let Some(caps) = buffer_regex.captures(instruction) {
             let input = caps.get(1).unwrap().as_str();
             let input = match input.parse::<u16>() {
                 Ok(x) => Signal::Value(x),
                 Err(_) => Signal::Wire(input),
             };
-            Gate::Buffer {
-                input,
-                output: caps.get(2).unwrap().as_str(),
-            }
+            let gate = Gate::Buffer { input };
+            let wire = caps.get(2).unwrap().as_str();
+            (gate, wire)
         } else if let Some(caps) = binary_gate_regex.captures(instruction) {
-            match caps.get(2).unwrap().as_str() {
+            let gate = match caps.get(2).unwrap().as_str() {
                 "AND" => {
                     let left = caps.get(1).unwrap().as_str();
                     let left = match left.parse::<u16>() {
@@ -58,152 +46,153 @@ fn init_gates(instructions: &str) -> Vec<Gate> {
                     Gate::And {
                         left,
                         right: caps.get(3).unwrap().as_str(),
-                        output: caps.get(4).unwrap().as_str(),
                     }
                 }
                 "OR" => Gate::Or {
                     left: caps.get(1).unwrap().as_str(),
                     right: caps.get(3).unwrap().as_str(),
-                    output: caps.get(4).unwrap().as_str(),
                 },
                 _ => unreachable!("Binary gate matched: '{}'", instruction),
-            }
+            };
+            let wire = caps.get(4).unwrap().as_str();
+            (gate, wire)
         } else if let Some(caps) = shift_regex.captures(instruction) {
-            match caps.get(2).unwrap().as_str() {
+            let gate = match caps.get(2).unwrap().as_str() {
                 "LSHIFT" => Gate::LeftShift {
                     left: caps.get(1).unwrap().as_str(),
                     right: caps.get(3).unwrap().as_str().parse().unwrap(),
-                    output: caps.get(4).unwrap().as_str(),
                 },
                 "RSHIFT" => Gate::RightShift {
                     left: caps.get(1).unwrap().as_str(),
                     right: caps.get(3).unwrap().as_str().parse().unwrap(),
-                    output: caps.get(4).unwrap().as_str(),
                 },
                 _ => unreachable!("Shift gate matched: '{}'", instruction),
-            }
+            };
+            let wire = caps.get(4).unwrap().as_str();
+            (gate, wire)
         } else if let Some(caps) = unary_gate_regex.captures(instruction) {
-            match caps.get(1).unwrap().as_str() {
+            let gate = match caps.get(1).unwrap().as_str() {
                 "NOT" => Gate::Not {
                     input: caps.get(2).unwrap().as_str(),
-                    output: caps.get(3).unwrap().as_str(),
                 },
                 _ => unreachable!("Unary gate matched: '{}'", instruction),
-            }
+            };
+            let wire = caps.get(3).unwrap().as_str();
+            (gate, wire)
         } else {
             panic!("invalid instruction: {}", instruction)
         };
-        gates.push(gate);
-    }
-    gates
-}
-
-fn init_wires<'a>(gates: &[Gate<'a>]) -> BTreeMap<&'a str, Option<u16>> {
-    let mut map = BTreeMap::new();
-    for gate in gates {
-        map.insert(gate.output(), None);
+        map.insert(wire, gate);
     }
     map
 }
 
-fn emulate<'a>(gates: &[Gate<'a>], wires: &mut BTreeMap<&'a str, Option<u16>>) {
-    for gate in gates {
-        let output = gate.output();
-        if wires.get_mut(output).unwrap().is_none() {
-            let signal = gate.emulate(wires);
-            wires.insert(output, signal);
-        }
+fn signal<'a>(
+    wire: &'a str,
+    circuit: &BTreeMap<&'a str, Gate<'a>>,
+    signals: &mut BTreeMap<&'a str, u16>,
+) -> u16 {
+    if let Some(x) = signals.get(wire) {
+        return *x;
     }
+    let gate = circuit.get(wire).expect("unknown wire");
+    let signal = match gate {
+        Gate::Buffer { input, .. } => match input {
+            Signal::Value(x) => *x,
+            Signal::Wire(input) => match signals.get(input) {
+                Some(x) => *x,
+                None => signal(input, circuit, signals),
+            },
+        },
+        Gate::And { left, right, .. } => {
+            let left_signal = match left {
+                Signal::Value(x) => *x,
+                Signal::Wire(left) => match signals.get(left) {
+                    Some(x) => *x,
+                    None => {
+                        let signal = signal(left, circuit, signals);
+                        signals.insert(left, signal);
+                        signal
+                    }
+                },
+            };
+            let right_signal = match signals.get(right) {
+                Some(x) => *x,
+                None => {
+                    let right_signal = signal(right, circuit, signals);
+                    signals.insert(right, right_signal);
+                    right_signal
+                }
+            };
+            left_signal & right_signal
+        }
+        Gate::Or { left, right, .. } => {
+            let left_signal = match signals.get(left) {
+                Some(x) => *x,
+                None => {
+                    let left_signal = signal(left, circuit, signals);
+                    signals.insert(left, left_signal);
+                    left_signal
+                }
+            };
+            let right_signal = match signals.get(right) {
+                Some(x) => *x,
+                None => {
+                    let right_signal = signal(right, circuit, signals);
+                    signals.insert(right, right_signal);
+                    right_signal
+                }
+            };
+            left_signal | right_signal
+        }
+        Gate::RightShift { left, right, .. } => {
+            let left_signal = match signals.get(left) {
+                Some(x) => *x,
+                None => {
+                    let left_signal = signal(left, circuit, signals);
+                    signals.insert(left, left_signal);
+                    left_signal
+                }
+            };
+            left_signal >> right
+        }
+        Gate::LeftShift { left, right, .. } => {
+            let left_signal = match signals.get(left) {
+                Some(x) => *x,
+                None => {
+                    let left_signal = signal(left, circuit, signals);
+                    signals.insert(left, left_signal);
+                    left_signal
+                }
+            };
+            left_signal << right
+        }
+        Gate::Not { input, .. } => {
+            let input_signal = match signals.get(input) {
+                Some(x) => *x,
+                None => {
+                    let input_signal = signal(input, circuit, signals);
+                    signals.insert(input, input_signal);
+                    input_signal
+                }
+            };
+            !input_signal
+        }
+    };
+    signals.insert(wire, signal);
+    signal
 }
 enum Signal<'a> {
     Wire(&'a str),
     Value(u16),
 }
 enum Gate<'a> {
-    Buffer {
-        input: Signal<'a>,
-        output: &'a str,
-    },
-    And {
-        left: Signal<'a>,
-        right: &'a str,
-        output: &'a str,
-    },
-    Or {
-        left: &'a str,
-        right: &'a str,
-        output: &'a str,
-    },
-    RightShift {
-        left: &'a str,
-        right: u16,
-        output: &'a str,
-    },
-    LeftShift {
-        left: &'a str,
-        right: u16,
-        output: &'a str,
-    },
-    Not {
-        input: &'a str,
-        output: &'a str,
-    },
-}
-
-impl<'a> Gate<'a> {
-    fn output(&self) -> &'a str {
-        match self {
-            Gate::Buffer { output, .. } => output,
-            Gate::And { output, .. } => output,
-            Gate::Or { output, .. } => output,
-            Gate::RightShift { output, .. } => output,
-            Gate::LeftShift { output, .. } => output,
-            Gate::Not { output, .. } => output,
-        }
-    }
-
-    fn emulate(&self, wires: &BTreeMap<&'a str, Option<u16>>) -> Option<u16> {
-        match self {
-            Gate::Buffer { input, .. } => match input {
-                Signal::Value(x) => Some(*x),
-                Signal::Wire(wire) => match wires.get(wire).unwrap() {
-                    Some(x) => Some(*x),
-                    None => None,
-                },
-            },
-            Gate::And { left, right, .. } => {
-                let left = match left {
-                    Signal::Value(x) => *x,
-                    Signal::Wire(wire) => match wires.get(wire).unwrap() {
-                        Some(x) => *x,
-                        None => return None,
-                    },
-                };
-                match wires.get(right).unwrap() {
-                    Some(right) => Some(left & *right),
-                    None => None,
-                }
-            }
-            Gate::Or { left, right, .. } => {
-                match wires.get(left).unwrap().zip(*wires.get(right).unwrap()) {
-                    Some((left, right)) => Some(left | right),
-                    None => None,
-                }
-            }
-            Gate::RightShift { left, right, .. } => match wires.get(left).unwrap() {
-                Some(left) => Some(*left >> *right),
-                None => None,
-            },
-            Gate::LeftShift { left, right, .. } => match wires.get(left).unwrap() {
-                Some(left) => Some(*left << *right),
-                None => None,
-            },
-            Gate::Not { input, .. } => match wires.get(input).unwrap() {
-                Some(input) => Some(!input),
-                None => None,
-            },
-        }
-    }
+    Buffer { input: Signal<'a> },
+    And { left: Signal<'a>, right: &'a str },
+    Or { left: &'a str, right: &'a str },
+    RightShift { left: &'a str, right: u16 },
+    LeftShift { left: &'a str, right: u16 },
+    Not { input: &'a str },
 }
 
 #[test]
@@ -217,18 +206,14 @@ fn part_one_example() {
     y RSHIFT 2 -> g\n\
     NOT x -> h\n\
     NOT y -> i\n";
-    let gates = init_gates(instructions);
-    let mut wires = init_wires(&gates);
-    emulate_circuit(&gates, &mut wires);
-    assert_eq!(Some(72), *wires.get("d").unwrap());
-    assert_eq!(Some(507), *wires.get("e").unwrap());
-    assert_eq!(Some(492), *wires.get("f").unwrap());
-    assert_eq!(Some(114), *wires.get("g").unwrap());
-    assert_eq!(Some(65412), *wires.get("h").unwrap());
-    assert_eq!(Some(65079), *wires.get("i").unwrap());
-    assert_eq!(Some(123), *wires.get("x").unwrap());
-    assert_eq!(Some(456), *wires.get("y").unwrap());
+    let circuit = init(instructions.trim());
+    let mut signals = BTreeMap::new();
+    assert_eq!(72, signal("d", &circuit, &mut signals));
+    assert_eq!(507, signal("e", &circuit, &mut signals));
+    assert_eq!(492, signal("f", &circuit, &mut signals));
+    assert_eq!(114, signal("g", &circuit, &mut signals));
+    assert_eq!(65412, signal("h", &circuit, &mut signals));
+    assert_eq!(65079, signal("i", &circuit, &mut signals));
+    assert_eq!(123, signal("x", &circuit, &mut signals));
+    assert_eq!(456, signal("y", &circuit, &mut signals));
 }
-
-#[test]
-fn part_two_example() {}

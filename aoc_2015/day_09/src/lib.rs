@@ -24,7 +24,7 @@ pub fn part_two(input: &str) -> u32 {
     distances.into_iter().max().unwrap()
 }
 
-fn init<'a>(input: &'a str) -> HashMap<[&'a str; 2], u32> {
+fn init(input: &str) -> HashMap<[&str; 2], u32> {
     let mut map = HashMap::new();
     let regex = regex::Regex::new(r"^([A-Za-z]+) to ([A-Za-z]+) = (\d+)$").unwrap();
     for line in input.trim().lines() {

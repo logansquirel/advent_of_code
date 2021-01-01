@@ -51,6 +51,13 @@ name = "aoc_2015_day_08"
 version = "1.0.0"
 
 [[package]]
+name = "aoc_2015_day_09"
+version = "1.0.0"
+dependencies = [
+ "regex",
+]
+
+[[package]]
 name = "aoc_2016_day_01"
 version = "1.0.0"
 

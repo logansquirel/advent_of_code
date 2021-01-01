@@ -17,7 +17,8 @@ For example, given the following distances:
 London to Dublin = 464
 London to Belfast = 518
 Dublin to Belfast = 141
-```text
+```
+
 The possible routes are therefore:
 
 ```text
@@ -30,7 +31,7 @@ Belfast -> London -> Dublin = 982
 ```
 
 The shortest of these is `London -> Dublin -> Belfast = 605`, and so the answer
-is `605 `in this example.
+is `605` in this example.
 
 **What is the distance of the shortest route?**
 

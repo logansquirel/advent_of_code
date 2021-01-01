@@ -15,7 +15,7 @@ pub fn part_two(input: &str) -> u16 {
     signal("a", &circuit, &mut signals)
 }
 
-fn init<'a>(instructions: &'a str) -> BTreeMap<&'a str, Gate<'a>> {
+fn init(instructions: &str) -> BTreeMap<&str, Gate> {
     let mut map = BTreeMap::new();
 
     let buffer_regex = Regex::new(r"^([[:alnum:]]+) -> ([[:alpha:]]+)$").unwrap();

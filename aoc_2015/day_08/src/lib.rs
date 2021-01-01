@@ -23,7 +23,9 @@ fn code_count(str: &str) -> usize {
 }
 
 fn encode_count(str: &str) -> usize {
-    str.escape_default().count() + 2
+    let str = str.replace("\\", "\\\\");
+    let str = str.replace('"', "\\\"");
+    str.len() + 2
 }
 
 fn memory_count(str: &str) -> usize {

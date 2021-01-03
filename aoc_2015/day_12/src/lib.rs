@@ -7,22 +7,19 @@ pub fn part_two(input: &str) -> i32 {
     sum(&input)
 }
 
-fn sum(input: &str) -> i32 { 
+fn sum(input: &str) -> i32 {
     let mut iter = input.trim().chars();
     let mut sum = 0;
     while let Some(char) = iter.next() {
         match char {
             '-' | '0'..='9' => {
                 let mut number = String::from(char);
-                loop {
-                    match iter.next() {
-                        Some(digit @ '0'..='9') => number.push(digit),
-                        _ => break
-                    }
+                while let Some(digit @ '0'..='9') = iter.next() {
+                    number.push(digit);
                 }
                 sum += number.parse::<i32>().unwrap();
             }
-            _ => continue
+            _ => continue,
         }
     }
     sum

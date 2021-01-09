@@ -25,7 +25,7 @@ language you like.
 This repository is a collection of possible solution to each puzzle using the
 [Rust](https://www.rust-lang.org/) programming language.
 
-[![AoC-2015](https://img.shields.io/badge/AoC--2015-24%20%E2%98%85-5e81ac?style=for-the-badge)](aoc_2015/README.md)
+[![AoC-2015](https://img.shields.io/badge/AoC--2015-26%20%E2%98%85-5e81ac?style=for-the-badge)](aoc_2015/README.md)
 
 [![AoC-2016](https://img.shields.io/badge/AoC--2016-6%20%E2%98%85-5e81ac?style=for-the-badge)](aoc_2016/README.md)
 

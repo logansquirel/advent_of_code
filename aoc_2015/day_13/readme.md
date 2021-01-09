@@ -41,7 +41,6 @@ gains `83`, Alice gains `54`). Finally, seat Carol, who sits next to Bob (Carol
 gains `60`, Bob loses `7`) and David (Carol gains `55`, David gains `41`). The
 arrangement looks like this:
 
-
 ```text
      +41 +46
 +55   David    -2
